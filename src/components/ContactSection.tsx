@@ -1,12 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
-<<<<<<< HEAD
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
-    window.open(`https://wa.me/+919916082929?text=${message}`, '_blank');
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,7 +26,6 @@ const ContactSection = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
     window.open(`https://wa.me/919916082929?text=${message}`, '_blank');
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
   };
 
   return (
@@ -44,11 +38,6 @@ const ContactSection = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-        {/* Only Contact Information shown */}
-        <div className="flex justify-center">
-          <div className="space-y-8 w-full max-w-xl">
-=======
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Form */}
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
@@ -113,7 +102,6 @@ const ContactSection = () => {
 
           {/* Contact Information */}
           <div className="space-y-6 sm:space-y-8">
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
             {/* Contact Details */}
             <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6">Contact Information</h3>
@@ -123,13 +111,8 @@ const ContactSection = () => {
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h4 className="font-semibold text-slate-800 mb-1">Phone</h4>
-                    <p className="text-slate-600"> Bhanwar lal Dara : 9916082929 , 9620368553, 7829832929</p>
-=======
                     <h4 className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">Phone</h4>
                     <p className="text-slate-600 text-sm sm:text-base">Bhanwar lal Dara : 9916082929, 9620368553</p>
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
                   </div>
                 </div>
 
@@ -180,23 +163,6 @@ const ContactSection = () => {
               </button>
             </div>
 
-<<<<<<< HEAD
-            {/* Google Map Pin Link */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center py-8">
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://www.google.co.in/maps/place/Kamdhenu+steel+furniture-KSF/@13.0093818,77.4986728,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae3da3c5c17215:0x1f793b74316273cf!8m2!3d13.0093818!4d77.5012477!16s%2Fg%2F11n986wl57?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
-                    "_blank"
-                  )
-                }
-                className="flex flex-col items-center focus:outline-none"
-                aria-label="Open Kamdhenu Steel Location in Google Maps"
-              >
-                <MapPin className="w-16 h-16 text-orange-600 mb-2" />
-                <span className="text-slate-800 font-semibold">View on Google Maps</span>
-              </button>
-=======
             {/* Google Map */}
             <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
               <div className="h-48 sm:h-64 bg-slate-200 flex items-center justify-center">
@@ -208,7 +174,6 @@ const ContactSection = () => {
                   </p>
                 </div>
               </div>
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
             </div>
           </div>
         </div>

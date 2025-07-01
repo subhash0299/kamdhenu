@@ -19,11 +19,7 @@ const Footer = () => {
               <img
                 src="/whitelogo.png"
                 alt="Kamdhenu Steel Logo"
-<<<<<<< HEAD
-                className="h-16 w-auto object-contain"
-=======
                 className="h-6 sm:h-8 w-auto object-contain"
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -34,11 +30,7 @@ const Footer = () => {
               <div className="hidden w-6 h-6 sm:w-8 sm:h-8 bg-orange-600 rounded-lg items-center justify-center">
                 <span className="text-white font-bold text-sm sm:text-lg">K</span>
               </div>
-<<<<<<< HEAD
-              <span className="text-xl font-bold">Kamdhenu Steel Furniture</span>
-=======
               <span className="text-lg sm:text-xl font-bold">Kamdhenu Steel</span>
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
             </div>
             <p className="text-slate-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base leading-relaxed">
               Creating premium steel furniture for modern homes and offices. 

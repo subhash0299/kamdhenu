@@ -74,11 +74,7 @@ const AboutSection = () => {
           <div className="flex flex-col md:flex-row items-center bg-slate-50 rounded-xl p-6 sm:p-8 shadow-sm gap-6 sm:gap-10">
             {/* CEO Full Photo */}
             <img
-<<<<<<< HEAD
-              src="/public/ceo.png" // bhanwara dara pic
-=======
-              src="https://randomuser.me/api/portraits/men/32.jpg"
->>>>>>> 5844b8b892a704fe78c4c50438eafca8d83dccee
+              src="/ceo.png"
               alt="CEO"
               className="w-40 h-48 sm:w-48 sm:h-60 lg:w-56 lg:h-72 object-cover rounded-xl sm:rounded-2xl border-4 border-orange-600 shadow-lg"
             />
