@@ -85,22 +85,22 @@ const ProductsSection = () => {
     : products.filter(product => product.category === activeCategory);
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Our Products</h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Our Products</h2>
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-4">
             Discover our range of premium steel furniture designed for durability and style
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-colors ${
+              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors ${
                 activeCategory === category
                   ? 'bg-orange-600 text-white'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -112,7 +112,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProducts.map((product) => (
             <div
               key={product.id}
@@ -122,26 +122,26 @@ const ProductsSection = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span className="text-sm font-medium">{product.rating}</span>
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
+                  <Star className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current" />
+                  <span className="text-xs sm:text-sm font-medium">{product.rating}</span>
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                  <span className="text-xs sm:text-sm font-medium text-orange-600 bg-orange-50 px-2 sm:px-3 py-1 rounded-full">
                     {product.category}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-slate-800 mb-3">{product.name}</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">{product.name}</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
                 
                 <div className="flex justify-center">
-                  <button className="bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <button className="bg-slate-800 hover:bg-slate-900 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     View Details
                   </button>
                 </div>
@@ -151,10 +151,10 @@ const ProductsSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-slate-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Need Something Custom?</h3>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+        <div className="text-center mt-12 sm:mt-16">
+          <div className="bg-slate-50 rounded-2xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">Need Something Custom?</h3>
+            <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 max-w-2xl mx-auto px-4">
               We specialize in creating bespoke steel furniture tailored to your exact needs. 
               From concept to completion, we bring your vision to life.
             </p>
@@ -165,7 +165,7 @@ const ProductsSection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Get Custom Quote
             </button>

@@ -56,15 +56,12 @@ const GallerySection = () => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Auto-play when video comes into view
               video.play().then(() => {
                 setIsPlaying(true);
               }).catch(() => {
-                // Auto-play failed, show play button
                 setShowControls(true);
               });
             } else {
-              // Pause when video goes out of view
               video.pause();
               setIsPlaying(false);
             }
@@ -98,7 +95,7 @@ const GallerySection = () => {
       <div className="relative group">
         <video
           ref={videoRef}
-          className="w-full h-64 md:h-80 object-cover"
+          className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover"
           loop
           muted
           playsInline
@@ -112,30 +109,29 @@ const GallerySection = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* Video Controls Overlay */}
         <div 
           className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity duration-300 ${
             showControls || !isPlaying ? 'opacity-100' : 'opacity-0'
           }`}
           onMouseEnter={() => setShowControls(true)}
           onMouseLeave={() => setShowControls(false)}
+          onTouchStart={() => setShowControls(true)}
         >
           <button
             onClick={togglePlay}
-            className="bg-white/90 backdrop-blur-sm rounded-full p-4 hover:bg-white transition-all duration-300 hover:scale-110"
+            className="bg-white/90 backdrop-blur-sm rounded-full p-3 sm:p-4 hover:bg-white transition-all duration-300 hover:scale-110"
           >
             {isPlaying ? (
-              <Pause className="w-8 h-8 text-slate-800" />
+              <Pause className="w-6 h-6 sm:w-8 sm:h-8 text-slate-800" />
             ) : (
-              <Play className="w-8 h-8 text-slate-800 ml-1" />
+              <Play className="w-6 h-6 sm:w-8 sm:h-8 text-slate-800 ml-1" />
             )}
           </button>
         </div>
 
-        {/* Title Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="absolute bottom-4 left-4 right-4">
-            <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+          <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+            <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">{item.title}</h3>
           </div>
         </div>
       </div>
@@ -143,23 +139,21 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-slate-50">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">How We Work</h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">How We Work</h2>
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-4">
             Take a behind-the-scenes look at our craftsmanship and attention to detail
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className={`relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${
-                index % 3 === 0 ? 'md:col-span-2 lg:col-span-1' : ''
-              } ${index === 1 ? 'lg:row-span-2' : ''}`}
+              className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {item.type === 'video' ? (
                 <VideoPlayer item={item} index={index} />
@@ -168,13 +162,12 @@ const GallerySection = () => {
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   
-                  {/* Image Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+                    <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                      <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">{item.title}</h3>
                     </div>
                   </div>
                 </div>
@@ -184,7 +177,7 @@ const GallerySection = () => {
         </div>
 
         {/* Process Steps */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {[
             { step: '01', title: 'Design', description: 'Custom design based on your requirements' },
             { step: '02', title: 'Cut & Shape', description: 'Precision cutting and shaping of steel' },
@@ -192,11 +185,11 @@ const GallerySection = () => {
             { step: '04', title: 'Deliver', description: 'Quality check and delivery to your location' },
           ].map((process, index) => (
             <div key={index} className="text-center group">
-              <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:bg-orange-700 transition-colors">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-3 sm:mb-4 group-hover:bg-orange-700 transition-colors">
                 {process.step}
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{process.title}</h3>
-              <p className="text-slate-600">{process.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2">{process.title}</h3>
+              <p className="text-sm sm:text-base text-slate-600 px-2">{process.description}</p>
             </div>
           ))}
         </div>
