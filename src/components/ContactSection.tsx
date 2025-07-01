@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
-<<<<<<< HEAD
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,7 +26,6 @@ const ContactSection = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
     window.open(`https://wa.me/919916082929?text=${message}`, '_blank');
->>>>>>> 4e3af6c0118264eec53067d04abc54b1ff6e5c89
   };
 
   return (
@@ -44,76 +38,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-        {/* Only Contact Information shown */}
-        <div className="flex justify-center">
-          <div className="space-y-8 w-full max-w-xl">
-=======
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
-          {/* Contact Form */}
-          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6">Send us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors text-sm sm:text-base"
-                  placeholder="Your full name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors text-sm sm:text-base"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={4}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors resize-none text-sm sm:text-base"
-                  placeholder="Tell us about your project requirements..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-
           {/* Contact Information */}
           <div className="space-y-6 sm:space-y-8">
->>>>>>> 4e3af6c0118264eec53067d04abc54b1ff6e5c89
             {/* Contact Details */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
@@ -123,13 +50,8 @@ const ContactSection = () => {
                     <Phone className="w-6 h-6 text-orange-600" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h4 className="font-semibold text-slate-800 mb-1">Phone</h4>
-                    <p className="text-slate-600"> Bhanwar lal Dara : 9916082929 , 9620368553, 778</p>
-=======
                     <h4 className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">Phone</h4>
                     <p className="text-slate-600 text-sm sm:text-base">Bhanwar lal Dara : 9916082929, 9620368553</p>
->>>>>>> 4e3af6c0118264eec53067d04abc54b1ff6e5c89
                   </div>
                 </div>
 
@@ -179,36 +101,38 @@ const ContactSection = () => {
                 <span>Chat on WhatsApp</span>
               </button>
             </div>
+          </div>
 
-<<<<<<< HEAD
-            {/* Google Map Pin Link */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center py-8">
-              <button
-                onClick={() =>
+          {/* Google Map */}
+          <div className="h-full flex">
+            <div
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden flex flex-1 cursor-pointer transition hover:shadow-xl"
+              onClick={() =>
+                window.open(
+                  "https://www.google.co.in/maps/place/Kamdhenu+steel+furniture-KSF/@13.0101224,77.4979836,16.44z/data=!4m6!3m5!1s0x3bae3da3c5c17215:0x1f793b74316273cf!8m2!3d13.0093818!4d77.5012477!16s%2Fg%2F11n986wl57?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+                  "_blank"
+                )
+              }
+              title="Open in Google Maps"
+              tabIndex={0}
+              role="button"
+              onKeyPress={e => {
+                if (e.key === "Enter" || e.key === " ") {
                   window.open(
-                    "https://www.google.co.in/maps/place/Kamdhenu+steel+furniture-KSF/@13.0093818,77.4986728,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae3da3c5c17215:0x1f793b74316273cf!8m2!3d13.0093818!4d77.5012477!16s%2Fg%2F11n986wl57?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+                    "https://www.google.com/maps/place/No.+07,+2nd+cross,+3rd+main+road,+New+Extension+Area,+Kalasipalyam,+Bengaluru+-+560002",
                     "_blank"
-                  )
+                  );
                 }
-                className="flex flex-col items-center focus:outline-none"
-                aria-label="Open Kamdhenu Steel Location in Google Maps"
-              >
-                <MapPin className="w-16 h-16 text-orange-600 mb-2" />
-                <span className="text-slate-800 font-semibold">View on Google Maps</span>
-              </button>
-=======
-            {/* Google Map */}
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
-              <div className="h-48 sm:h-64 bg-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-10 h-10 sm:w-12 sm:h-12 text-orange-600 mx-auto mb-2" />
-                  <p className="text-slate-600 text-sm sm:text-base">Interactive Map</p>
-                  <p className="text-xs sm:text-sm text-slate-500">
-                    (Google Maps integration would go here)
-                  </p>
+              }}
+            >
+              <div className="relative w-full h-full flex-1">
+                <span className="absolute top-4 left-4 text-slate-600 text-lg sm:text-xl font-semibold z-10">
+                  Google Maps
+                </span>
+                <div className="w-full h-full flex flex-col items-center justify-center">
+                  <MapPin className="w-10 h-10 sm:w-12 sm:h-12 text-orange-600 mb-2" />
                 </div>
               </div>
->>>>>>> 4e3af6c0118264eec53067d04abc54b1ff6e5c89
             </div>
           </div>
         </div>
