@@ -30,9 +30,9 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
             <img
-              src="/logo.png"
+              src={isScrolled ? "/blacklogo.png" : "/whitelogo.png"}
               alt="Kamdhenu Steel Logo"
-              className="h-10 w-auto object-contain"
+              className="h-16 w-auto object-contain"
               onError={(e) => {
                 // Fallback to text logo if image fails to load
                 const target = e.target as HTMLImageElement;
@@ -48,7 +48,7 @@ const Header = () => {
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-slate-800' : 'text-white'
             }`}>
-              Kamdhenu Steel
+              Kamdhenu Steel Furniture
             </span>
           </div>
 

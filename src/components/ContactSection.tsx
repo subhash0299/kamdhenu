@@ -1,32 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/+919916082929?text=${message}`, '_blank');
   };
 
   return (
@@ -39,70 +17,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-slate-800 mb-6">Send us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
-                  placeholder="Your full name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Tell us about your project requirements..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-8">
+        {/* Only Contact Information shown */}
+        <div className="flex justify-center">
+          <div className="space-y-8 w-full max-w-xl">
             {/* Contact Details */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">Contact Information</h3>
@@ -113,7 +30,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800 mb-1">Phone</h4>
-                    <p className="text-slate-600"> Bhanwar lal Dara : 9916082929 , 9620368553</p>
+                    <p className="text-slate-600"> Bhanwar lal Dara : 9916082929 , 9620368553, 7829832929</p>
                   </div>
                 </div>
 
@@ -164,17 +81,21 @@ const ContactSection = () => {
               </button>
             </div>
 
-            {/* Google Map */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="h-64 bg-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-orange-600 mx-auto mb-2" />
-                  <p className="text-slate-600">Interactive Map</p>
-                  <p className="text-sm text-slate-500">
-                    (Google Maps integration would go here)
-                  </p>
-                </div>
-              </div>
+            {/* Google Map Pin Link */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center py-8">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://www.google.co.in/maps/place/Kamdhenu+steel+furniture-KSF/@13.0093818,77.4986728,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae3da3c5c17215:0x1f793b74316273cf!8m2!3d13.0093818!4d77.5012477!16s%2Fg%2F11n986wl57?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D",
+                    "_blank"
+                  )
+                }
+                className="flex flex-col items-center focus:outline-none"
+                aria-label="Open Kamdhenu Steel Location in Google Maps"
+              >
+                <MapPin className="w-16 h-16 text-orange-600 mb-2" />
+                <span className="text-slate-800 font-semibold">View on Google Maps</span>
+              </button>
             </div>
           </div>
         </div>

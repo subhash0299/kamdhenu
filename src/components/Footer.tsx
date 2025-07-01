@@ -17,9 +17,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/logo.png"
+                src="/whitelogo.png"
                 alt="Kamdhenu Steel Logo"
-                className="h-8 w-auto object-contain"
+                className="h-16 w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
@@ -32,7 +32,7 @@ const Footer = () => {
               <div className="hidden w-8 h-8 bg-orange-600 rounded-lg items-center justify-center">
                 <span className="text-white font-bold text-lg">K</span>
               </div>
-              <span className="text-xl font-bold">Kamdhenu Steel</span>
+              <span className="text-xl font-bold">Kamdhenu Steel Furniture</span>
             </div>
             <p className="text-slate-300 mb-6 max-w-md">
               Creating premium steel furniture for modern homes and offices. 
