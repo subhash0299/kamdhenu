@@ -27,25 +27,23 @@ const Header = () => {
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
+        <div className="flex justify-between items-center py-3 sm:py-4">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <img
               src="/logo.png"
               alt="Kamdhenu Steel Logo"
-              className="h-10 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain"
               onError={(e) => {
-                // Fallback to text logo if image fails to load
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
                 const fallback = target.nextElementSibling as HTMLElement;
                 if (fallback) fallback.style.display = 'flex';
               }}
             />
-            {/* Fallback text logo */}
-            <div className="hidden w-8 h-8 bg-orange-600 rounded-lg items-center justify-center">
-              <span className="text-white font-bold text-lg">K</span>
+            <div className="hidden w-6 h-6 sm:w-8 sm:h-8 bg-orange-600 rounded-lg items-center justify-center">
+              <span className="text-white font-bold text-sm sm:text-lg">K</span>
             </div>
-            <span className={`text-xl font-bold transition-colors ${
+            <span className={`text-lg sm:text-xl font-bold transition-colors ${
               isScrolled ? 'text-slate-800' : 'text-white'
             }`}>
               Kamdhenu Steel
@@ -53,7 +51,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {['home', 'products', 'gallery', 'about', 'contact'].map((item) => (
               <button
                 key={item}
@@ -74,14 +72,14 @@ const Header = () => {
               isScrolled ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
             }`}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg mb-4 shadow-lg">
-            <nav className="flex flex-col py-4">
+            <nav className="flex flex-col py-2">
               {['home', 'products', 'gallery', 'about', 'contact'].map((item) => (
                 <button
                   key={item}
