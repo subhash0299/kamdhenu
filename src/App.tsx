@@ -1,25 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ProductsSection from './components/ProductsSection';
-import GallerySection from './components/GallerySection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import GalleryPage from './pages/GalleryPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main>
-        <HeroSection />
-        <ProductsSection />
-        <GallerySection />
-        <AboutSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

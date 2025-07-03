@@ -1,14 +1,8 @@
 import React from 'react';
 import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-slate-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -21,14 +15,12 @@ const Footer = () => {
                 alt="Kamdhenu Steel Logo"
                 className="h-6 sm:h-8 w-auto object-contain"
                 onError={(e) => {
-                  // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
                   const fallback = target.nextElementSibling as HTMLElement;
                   if (fallback) fallback.style.display = 'flex';
                 }}
               />
-              {/* Fallback text logo */}
               <div className="hidden w-8 h-8 bg-orange-600 rounded-lg items-center justify-center">
                 <span className="text-white font-bold text-lg">K</span>
               </div>
@@ -67,19 +59,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { name: 'Home', id: 'home' },
-                { name: 'Products', id: 'products' },
-                { name: 'Gallery', id: 'gallery' },
-                { name: 'About', id: 'about' },
-                { name: 'Contact', id: 'contact' },
+                { name: 'Home', path: '/' },
+                { name: 'Products', path: '/products' },
+                { name: 'Gallery', path: '/gallery' },
+                { name: 'About', path: '/about' },
+                { name: 'Contact', path: '/contact' },
               ].map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
                     className="text-slate-300 hover:text-orange-400 transition-colors"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
