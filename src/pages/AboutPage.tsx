@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
   const stats = [
-    { icon: Award, label: 'Years Experience', value: '10+' },
+    { icon: Award, label: 'Years Experience', value: '15+' },
     { icon: Users, label: 'Happy Customers', value: '500+' },
     { icon: Clock, label: 'Projects Completed', value: '1000+' },
     { icon: Shield, label: 'Warranty Years', value: '5' },
@@ -28,15 +28,20 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Story</h2>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                We are a team of passionate craftsmen specializing in modern steel furniture. 
-                With 10+ years of experience, we deliver long-lasting, custom-designed furniture 
-                solutions for homes and businesses.
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed text-justify">
+                Established in 2009, Kamdhenu Steel Furnitures is a leading manufacturer, wholesaler, 
+                and trader of Wooden Railing Pillars and Stainless Steel Railing Pillars. 
+                Over the years, we have built a reputation for delivering superior-quality products that 
+                combine strength, elegance, and functionality. Our commitment to excellence and attention 
+                to detail has positioned us as a trusted name in the railing and steel furniture industry.
               </p>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Our commitment to quality craftsmanship and innovative design has made us a 
-                trusted name in the steel furniture industry. Every piece is meticulously 
-                crafted to meet the highest standards of durability and aesthetics.
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed text-justify">
+                We are a team of passionate craftsmen with over 15 years of experience, specializing in 
+                modern steel furniture solutions for both residential and commercial spaces. Every piece 
+                we create is thoughtfully designed and meticulously crafted to ensure long-lasting durability
+                 and aesthetic appeal. Our focus on quality craftsmanship and innovative design enables us
+                  to offer custom-designed furniture that meets the unique needs of our clients and exceeds 
+                  their expectations.
               </p>
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
@@ -53,12 +58,12 @@ const AboutPage = () => {
               </div>
             </div>
             {/* Workshop Image */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative h-full flex items-stretch">
+              <div className="relative overflow-hidden rounded-4xl shadow-4xl h-full flex items-stretch">
                 <img
-                  src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/aboutimage.jpg"
                   alt="Our workshop and team"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-full object-contain bg-white"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>

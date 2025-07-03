@@ -19,9 +19,11 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                We are a team of passionate craftsmen specializing in modern steel furniture. 
-                With 10+ years of experience, we deliver long-lasting, custom-designed furniture 
-                solutions for homes and businesses.
+                Established in 2009, Kamdhenu Steel Furnitures is a leading manufacturer, wholesaler, 
+                and trader of Wooden Railing Pillars and Stainless Steel Railing Pillars. 
+                Over the years, we have built a reputation for delivering superior-quality products that 
+                combine strength, elegance, and functionality. Our commitment to excellence and attention 
+                to detail has positioned us as a trusted name in the railing and steel furniture industry.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Our commitment to quality craftsmanship and innovative design has made us a 
