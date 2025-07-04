@@ -204,7 +204,7 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Award, label: 'Years Experience', value: '10+', description: 'Decade of expertise' },
+              { icon: Award, label: 'Years Experience', value: '15+', description: 'Decade of expertise' },
               { icon: Users, label: 'Happy Customers', value: '500+', description: 'Satisfied clients' },
               { icon: Clock, label: 'Projects Completed', value: '1000+', description: 'Successful deliveries' },
               { icon: Award, label: 'Warranty Years', value: '5', description: 'Quality guarantee' },

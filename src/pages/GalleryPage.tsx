@@ -141,10 +141,10 @@ const GalleryPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+      <section className="py-20 bg-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">How We Work</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-1000 max-w-2xl mx-auto">
             Take a behind-the-scenes look at our craftsmanship and attention to detail in every step of our process
           </p>
         </div>

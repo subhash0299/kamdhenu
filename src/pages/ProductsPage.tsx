@@ -1,5 +1,4 @@
 import React from 'react';
-import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProductsPage = () => {
@@ -88,10 +87,10 @@ const ProductsPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+      <section className="py-20 bg-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Our Products</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-1000 max-w-2xl mx-auto">
             Discover our comprehensive range of premium steel furniture designed for durability, style, and functionality
           </p>
         </div>
@@ -130,10 +129,7 @@ const ProductsPage = () => {
                     alt={product.name}
                     className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
-                    <Star className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current" />
-                    <span className="text-xs sm:text-sm font-medium">{product.rating}</span>
-                  </div>
+                  {/* Removed rating badge */}
                 </div>
                 
                 <div className="p-4 sm:p-6">
@@ -146,14 +142,7 @@ const ProductsPage = () => {
                   <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">{product.name}</h3>
                   <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
                   
-                  <div className="flex justify-center">
-                    <Link
-                      to="/contact"
-                      className="bg-slate-800 hover:bg-slate-900 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    >
-                      Get Quote
-                    </Link>
-                  </div>
+                  {/* Removed Get Quote button */}
                 </div>
               </div>
             ))}

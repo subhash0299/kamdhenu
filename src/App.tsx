@@ -7,11 +7,13 @@ import ProductsPage from './pages/ProductsPage';
 import GalleryPage from './pages/GalleryPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
