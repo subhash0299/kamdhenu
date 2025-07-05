@@ -7,7 +7,7 @@ const ProductsPage = () => {
       id: 1,
       name: 'Industrial Dining Table',
       category: 'Tables',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/white.png',
       description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
       rating: 4.8,
     },
