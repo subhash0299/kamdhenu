@@ -5,8 +5,8 @@ const ProductsPage = () => {
   const products = [
     {
       id: 1,
-      name: 'Industrial Dining Table',
-      category: 'Tables',
+      name: 'Industrial Piller',
+      category: 'Pillers',
       image: '/white.png',
       description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
       rating: 4.8,
@@ -77,7 +77,7 @@ const ProductsPage = () => {
     },
   ];
 
-  const categories = ['All', 'Tables', 'Chairs', 'Racks', 'Cabinets', 'Custom Orders'];
+  const categories = ['All', 'Pillers', 'Chairs', 'Racks', 'Cabinets', 'Custom Orders'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredProducts = activeCategory === 'All' 

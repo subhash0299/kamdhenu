@@ -76,11 +76,11 @@ const ProductDetailPage = () => {
                   <button
                     key={index}
                     onClick={() => handleColorChange(index)}
-                    className={`w-8 h-8 rounded-full border-4 transition-all duration-200 hover:scale-110 ${
-                      selectedColor === index
-                        ? 'border-orange-600 shadow-lg scale-110'
-                        : 'border-white shadow-md hover:border-slate-300'
-                    }`}
+                    className={`w-8 h-8 rounded-full border-4 transition-all duration-200 hover:scale-110
+                      ${selectedColor === index
+                        ? 'border-blue-800 shadow-lg scale-110'
+                        : 'border-white shadow-md hover:border-slate-400'
+                      }`}
                     style={{ backgroundColor: color.code }}
                     title={color.name}
                   />

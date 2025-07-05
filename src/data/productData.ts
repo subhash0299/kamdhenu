@@ -25,7 +25,7 @@ export const productData: Product[] = [
   {
     id: 1,
     name: 'Industrial Dining Table',
-    category: 'Tables',
+    category: 'Pillers',
     baseImage: '/white.png?auto=compress&cs=tinysrgb&w=800',
     description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
     fullDescription: 'Our Industrial Dining Table features a robust steel frame construction that ensures longevity and stability. The table top is crafted from premium quality wood that complements the industrial aesthetic while providing a warm, inviting surface for dining. Perfect for both residential and commercial spaces, this table can accommodate 6-8 people comfortably.',
@@ -36,10 +36,12 @@ export const productData: Product[] = [
     material: 'Steel frame with solid wood top',
     warranty: '5 years',
     colors: [
-      { name: 'Natural Steel', code: '#8B9DC3', image: '/yellow1.png' },
-      { name: 'Black Steel', code: '#2C3E50', image: '/pink.png' },
-      { name: 'Bronze Steel', code: '#CD7F32', image: '/blue.png' },
-      { name: 'White Steel', code: '#F8F9FA', image: '/orange.png' }
+      { name: 'Yellow', code: '#d4a835', image: '/yellow1.png' },
+      { name: 'Pink', code: '#d5001a', image: '/pink.png' },
+      { name: 'Blue', code: '##006090', image: '/blue.png' },
+      { name: 'Orange', code: '#c04600', image: '/orange.png' },
+      { name: 'Brown', code: '#986c44', image: '/brown.png' },
+      { name: 'Yellow Light', code: '#df8300', image: '/yellow-light.png' }
     ],
     features: [
       'Heavy-duty steel construction',
