@@ -171,7 +171,7 @@ const HomePage = () => {
                   <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
                   
                   <Link
-                    to="/products"
+                    to={`/products/${product.id}`}
                     className="block text-center bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     View Details

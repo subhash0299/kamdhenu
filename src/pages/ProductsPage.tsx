@@ -129,7 +129,6 @@ const ProductsPage = () => {
                     alt={product.name}
                     className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  {/* Removed rating badge */}
                 </div>
                 
                 <div className="p-4 sm:p-6">
@@ -142,7 +141,14 @@ const ProductsPage = () => {
                   <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">{product.name}</h3>
                   <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
                   
-                  {/* Removed Get Quote button */}
+                  <div className="flex justify-center">
+                    <Link
+                      to={`/products/${product.id}`}
+                      className="bg-slate-800 hover:bg-slate-900 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
