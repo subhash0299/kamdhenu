@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Star, Palette, Shield, Truck, Award } from 'lucide-react';
+import { ArrowLeft, Star, Shield, Truck, Award } from 'lucide-react';
 import { productData } from '../data/productData';
 
 const ProductDetailPage = () => {
@@ -70,31 +70,21 @@ const ProductDetailPage = () => {
                 </div>
               </div>
 
-              {/* Color Selection */}
-              <div className="bg-slate-50 rounded-xl p-6">
-                <div className="flex items-center space-x-2 mb-4">
-                  <Palette className="w-5 h-5 text-orange-600" />
-                  <h3 className="text-lg font-semibold text-slate-800">Available Colors</h3>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {product.colors.map((color, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleColorChange(index)}
-                      className={`flex items-center space-x-3 p-3 rounded-lg border-2 transition-all ${
-                        selectedColor === index
-                          ? 'border-orange-600 bg-orange-50'
-                          : 'border-slate-200 hover:border-slate-300'
-                      }`}
-                    >
-                      <div
-                        className="w-6 h-6 rounded-full border-2 border-white shadow-md"
-                        style={{ backgroundColor: color.code }}
-                      />
-                      <span className="text-sm font-medium text-slate-700">{color.name}</span>
-                    </button>
-                  ))}
-                </div>
+              {/* Color Selection - Simple Round Boxes */}
+              <div className="flex items-center justify-center space-x-3 py-4">
+                {product.colors.map((color, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleColorChange(index)}
+                    className={`w-8 h-8 rounded-full border-4 transition-all duration-200 hover:scale-110 ${
+                      selectedColor === index
+                        ? 'border-orange-600 shadow-lg scale-110'
+                        : 'border-white shadow-md hover:border-slate-300'
+                    }`}
+                    style={{ backgroundColor: color.code }}
+                    title={color.name}
+                  />
+                ))}
               </div>
             </div>
 
