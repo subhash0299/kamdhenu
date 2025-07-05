@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Settings } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -55,7 +55,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.path}
@@ -71,6 +71,21 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Admin Link */}
+            <Link
+              to="/admin"
+              className={`p-2 rounded-lg transition-colors hover:bg-orange-100 ${
+                location.pathname === '/admin'
+                  ? 'text-orange-600 bg-orange-50'
+                  : isScrolled || !isHomePage
+                  ? 'text-slate-700 hover:text-orange-600'
+                  : 'text-white hover:bg-white/10'
+              }`}
+              title="Admin Panel"
+            >
+              <Settings className="w-5 h-5" />
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -102,6 +117,18 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                to="/admin"
+                onClick={() => setIsMenuOpen(false)}
+                className={`font-medium hover:text-orange-600 hover:bg-orange-50 px-4 py-3 text-left transition-colors flex items-center space-x-2 ${
+                  location.pathname === '/admin'
+                    ? 'text-orange-600 bg-orange-50'
+                    : 'text-slate-700'
+                }`}
+              >
+                <Settings className="w-4 h-4" />
+                <span>Admin Panel</span>
+              </Link>
             </nav>
           </div>
         )}
