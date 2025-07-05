@@ -118,13 +118,13 @@ const ProductsSection = () => {
               key={product.id}
               className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-white p-4">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-48 sm:h-56 lg:h-64 object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
+                <div className="absolute top-6 sm:top-8 right-6 sm:right-8 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
                   <Star className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current" />
                   <span className="text-xs sm:text-sm font-medium">{product.rating}</span>
                 </div>

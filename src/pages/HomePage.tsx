@@ -28,7 +28,7 @@ const HomePage = () => {
       id: 1,
       name: 'Industrial Dining Table',
       category: 'Tables',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/white.png',
       description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
       rating: 4.8,
     },
@@ -151,13 +151,13 @@ const HomePage = () => {
                 key={product.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-white p-4">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
+                  <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-sm font-medium">{product.rating}</span>
                   </div>

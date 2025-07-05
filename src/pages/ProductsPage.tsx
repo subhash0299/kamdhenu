@@ -123,11 +123,11 @@ const ProductsPage = () => {
                 key={product.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-white p-4">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-48 sm:h-56 lg:h-64 object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 
