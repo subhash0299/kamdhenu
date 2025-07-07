@@ -38,7 +38,7 @@ export const productData: Product[] = [
     colors: [
       { name: 'Yellow', code: '#d4a835', image: '/yellow1.png' },
       { name: 'Pink', code: '#d5001a', image: '/pink.png' },
-      { name: 'Blue', code: '##006090', image: '/blue.png' },
+      { name: 'Blue', code: '#00568d', image: '/blue.png' },
       { name: 'Orange', code: '#c04600', image: '/orange.png' },
       { name: 'Brown', code: '#986c44', image: '/brown.png' },
       { name: 'Yellow Light', code: '#df8300', image: '/yellow-light.png' }
