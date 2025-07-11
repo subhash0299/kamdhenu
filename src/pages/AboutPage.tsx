@@ -93,7 +93,7 @@ const AboutPage = () => {
             <img
               src="/ceo.png"
               alt="CEO"
-              className="w-56 h-72 object-cover rounded-2xl border-4 border-orange-600 shadow-lg"
+              className="w-56 h-72 object-cover rounded-2xl border-4 border-black-100 shadow-lg"
             />
             {/* CEO About Text */}
             <div className="flex-1">
