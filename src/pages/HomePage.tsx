@@ -1,62 +1,126 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Star, Award, Users, Clock } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Star, Award, Users, Clock, ArrowRight, Play, CheckCircle, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState({});
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const slides = [
     {
       image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Modern Steel Furniture for Homes & Offices',
-      subtitle: 'Custom-built. Durable. Stylish.',
+      title: 'Luxury Steel Furniture',
+      subtitle: 'Where Craftsmanship Meets Innovation',
+      description: 'Handcrafted excellence for discerning clients',
     },
     {
       image: 'https://images.pexels.com/photos/1082355/pexels-photo-1082355.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Industrial Design Meets Comfort',
-      subtitle: 'Handcrafted steel furniture for modern living.',
+      title: 'Bespoke Design Solutions',
+      subtitle: 'Tailored to Your Vision',
+      description: 'Custom creations that define luxury living',
     },
     {
       image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      title: 'Built to Last Generations',
-      subtitle: 'Premium quality steel construction.',
+      title: 'Timeless Elegance',
+      subtitle: 'Built for Generations',
+      description: 'Investment pieces that appreciate with time',
     },
   ];
 
   const featuredProducts = [
     {
       id: 1,
-      name: 'Industrial Dining Table',
-      category: 'Tables',
+      name: 'Signature Steel Pillar',
+      category: 'Premium Collection',
       image: '/white.png',
-      description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
-      rating: 4.8,
+      description: 'Architectural masterpiece combining strength with aesthetic brilliance',
+      rating: 4.9,
+      price: 'Custom Quote',
+      badge: 'Bestseller'
     },
     {
       id: 2,
-      name: 'Modern Steel Chair',
-      category: 'Chairs',
+      name: 'Executive Steel Chair',
+      category: 'Office Luxury',
       image: 'https://images.pexels.com/photos/1082355/pexels-photo-1082355.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Ergonomic design with cushioned seat for maximum comfort',
-      rating: 4.9,
+      description: 'Ergonomic excellence meets sophisticated design for the modern executive',
+      rating: 4.8,
+      price: 'From ₹25,000',
+      badge: 'New'
     },
     {
       id: 3,
-      name: 'Display Rack Unit',
-      category: 'Racks',
+      name: 'Designer Display Unit',
+      category: 'Showcase Series',
       image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Multi-tier storage solution for organized display',
-      rating: 4.7,
+      description: 'Museum-quality display solution for your most precious collections',
+      rating: 4.9,
+      price: 'From ₹35,000',
+      badge: 'Premium'
+    },
+  ];
+
+  const luxuryFeatures = [
+    {
+      icon: Award,
+      title: 'Master Craftsmanship',
+      description: 'Each piece is meticulously handcrafted by our master artisans with over 15 years of expertise',
+      metric: '15+ Years',
+      delay: 0
+    },
+    {
+      icon: Users,
+      title: 'Elite Clientele',
+      description: 'Trusted by luxury hotels, premium offices, and discerning homeowners across India',
+      metric: '500+ Clients',
+      delay: 200
+    },
+    {
+      icon: CheckCircle,
+      title: 'Bespoke Solutions',
+      description: 'Every creation is uniquely designed and tailored to your specific vision and requirements',
+      metric: '1000+ Projects',
+      delay: 400
+    },
+    {
+      icon: Sparkles,
+      title: 'Lifetime Excellence',
+      description: 'Premium materials and superior craftsmanship backed by our comprehensive warranty',
+      metric: '5 Year Warranty',
+      delay: 600
     },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(prev => ({
+              ...prev,
+              [entry.target.id]: true
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -67,157 +131,181 @@ const HomePage = () => {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
+    <div className="overflow-hidden">
+      {/* Hero Section with Parallax Effect */}
       <section className="relative h-screen overflow-hidden">
-        {/* Image Slider */}
+        {/* Animated Background */}
         <div className="absolute inset-0">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
+                index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
               }`}
             >
               <img
                 src={slide.image}
-                alt="Steel furniture"
+                alt="Luxury steel furniture"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
             </div>
+          ))}
+        </div>
+
+        {/* Floating Particles Animation */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}
+            />
           ))}
         </div>
 
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="hidden sm:block absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+          className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 z-20 group"
         >
-          <ChevronLeft size={20} />
+          <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </div>
         </button>
         <button
           onClick={nextSlide}
-          className="hidden sm:block absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 z-20 group"
         >
-          <ChevronRight size={20} />
+          <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+            <ChevronRight className="w-6 h-6 text-white" />
+          </div>
         </button>
 
-        {/* Content */}
+        {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              {slides[currentSlide].title}
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-6 animate-fade-in-up">
+              <span className="inline-block px-4 py-2 bg-orange-600/20 backdrop-blur-sm border border-orange-400/30 rounded-full text-orange-300 text-sm font-medium mb-4">
+                ✨ Premium Steel Furniture Specialists
+              </span>
+            </div>
+            
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
+              <span className="block bg-gradient-to-r from-white via-orange-100 to-white bg-clip-text text-transparent">
+                {slides[currentSlide].title}
+              </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-orange-200 mb-4 font-light animate-fade-in-up animation-delay-400">
               {slides[currentSlide].subtitle}
             </p>
-            <Link
-              to="/products"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Explore Our Products
-            </Link>
+            
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-600">
+              {slides[currentSlide].description}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
+              <Link
+                to="/products"
+                className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
+              >
+                <span className="relative z-10 flex items-center justify-center space-x-2">
+                  <span>Explore Collection</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+              </Link>
+              
+              <button className="group flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300">
+                <Play className="w-5 h-5" />
+                <span>Watch Process</span>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
+        {/* Elegant Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/40'
+              className={`transition-all duration-500 ${
+                index === currentSlide 
+                  ? 'w-12 h-3 bg-white rounded-full' 
+                  : 'w-3 h-3 bg-white/40 rounded-full hover:bg-white/60'
               }`}
             />
           ))}
         </div>
       </section>
 
-      {/* Featured Products Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Featured Products</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Discover our most popular steel furniture pieces
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
-              >
-                <div className="relative overflow-hidden bg-white p-4">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm font-medium">{product.rating}</span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <span className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
-                    {product.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 mt-3">{product.name}</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
-                  
-                  <Link
-                    to={`/products/${product.id}`}
-                    className="block text-center bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                  >
-                    View Details
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/products"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              View All Products
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Why Choose Kamdhenu Steel?</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              We deliver excellence in every piece of furniture we create
-            </p>
+      {/* Premium Features Section */}
+      <section 
+        id="features"
+        className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden"
+        ref={(el) => {
+          if (el && observerRef.current) {
+            observerRef.current.observe(el);
+          }
+        }}
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <div className={`transition-all duration-1000 ${isVisible.features ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
+                Why Choose Excellence
+              </span>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+                Crafted for the
+                <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                  Extraordinary
+                </span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Every piece tells a story of uncompromising quality, innovative design, and masterful execution
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Award, label: 'Years Experience', value: '15+', description: 'Decade of expertise' },
-              { icon: Users, label: 'Happy Customers', value: '500+', description: 'Satisfied clients' },
-              { icon: Clock, label: 'Projects Completed', value: '1000+', description: 'Successful deliveries' },
-              { icon: Award, label: 'Warranty Years', value: '5', description: 'Quality guarantee' },
-            ].map((stat, index) => {
-              const IconComponent = stat.icon;
+            {luxuryFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
               return (
-                <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
+                <div
+                  key={index}
+                  className={`group relative transition-all duration-1000 ${
+                    isVisible.features 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${feature.delay}ms` }}
+                >
+                  <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:-translate-y-2 overflow-hidden">
+                    {/* Gradient Background on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      
+                      <div className="text-center mb-4">
+                        <div className="text-3xl font-bold text-orange-600 mb-1">{feature.metric}</div>
+                        <h3 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h3>
+                      </div>
+                      
+                      <p className="text-slate-600 leading-relaxed text-center">{feature.description}</p>
+                    </div>
                   </div>
-                  <div className="text-3xl font-bold text-slate-800 mb-1">{stat.value}</div>
-                  <div className="text-lg font-semibold text-slate-700 mb-2">{stat.label}</div>
-                  <div className="text-sm text-slate-600">{stat.description}</div>
                 </div>
               );
             })}
@@ -225,26 +313,165 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Space?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Get in touch with us today for a custom quote on your steel furniture needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Featured Products Section */}
+      <section 
+        id="products"
+        className="py-32 bg-slate-900 relative overflow-hidden"
+        ref={(el) => {
+          if (el && observerRef.current) {
+            observerRef.current.observe(el);
+          }
+        }}
+      >
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.3),transparent_70%)]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <div className={`transition-all duration-1000 ${isVisible.products ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <span className="inline-block px-4 py-2 bg-orange-600/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-4">
+                Signature Collection
+              </span>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Masterpiece
+                <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                  Creations
+                </span>
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Discover our most coveted designs, each piece a testament to exceptional craftsmanship
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredProducts.map((product, index) => (
+              <div
+                key={product.id}
+                className={`group relative transition-all duration-1000 ${
+                  isVisible.products 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 200}ms` }}
+              >
+                <div className="relative bg-white rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 overflow-hidden group-hover:-translate-y-3">
+                  {/* Product Badge */}
+                  <div className="absolute top-6 left-6 z-20">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      product.badge === 'Bestseller' ? 'bg-green-500 text-white' :
+                      product.badge === 'New' ? 'bg-blue-500 text-white' :
+                      'bg-purple-500 text-white'
+                    }`}>
+                      {product.badge}
+                    </span>
+                  </div>
+
+                  {/* Product Image */}
+                  <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 p-8 h-80">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    {/* Rating Badge */}
+                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1 shadow-lg">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm font-semibold text-slate-800">{product.rating}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-8">
+                    <div className="mb-4">
+                      <span className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                        {product.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-orange-600 transition-colors">
+                      {product.name}
+                    </h3>
+                    
+                    <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
+                    
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="text-2xl font-bold text-slate-800">{product.price}</div>
+                    </div>
+                    
+                    <Link
+                      to={`/products/${product.id}`}
+                      className="group/btn relative w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2 overflow-hidden"
+                    >
+                      <span className="relative z-10">Explore Details</span>
+                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
             <Link
-              to="/contact"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              to="/products"
+              className="group inline-flex items-center space-x-2 bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
             >
-              Get Quote
+              <span>View Complete Collection</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
-              to="/gallery"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View Gallery
-            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Luxury CTA Section */}
+      <section className="py-32 bg-gradient-to-br from-slate-800 via-slate-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl animate-pulse animation-delay-1000" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block px-4 py-2 bg-orange-600/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6">
+              Ready to Begin Your Journey?
+            </span>
+            
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Transform Your Space with
+              <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                Luxury Steel Furniture
+              </span>
+            </h2>
+            
+            <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Experience the pinnacle of craftsmanship. Let us create something extraordinary for your space.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                to="/contact"
+                className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
+              >
+                <span className="relative z-10 flex items-center justify-center space-x-2">
+                  <span>Get Exclusive Quote</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+              </Link>
+              
+              <Link
+                to="/gallery"
+                className="group bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>View Our Process</span>
+                <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
