@@ -1,83 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { productData } from '../data/productData';
 
 const ProductsPage = () => {
-  const products = [
-    {
-      id: 1,
-      name: 'Industrial Piller',
-      category: 'Pillers',
-      image: '/white.png',
-      description: 'Sturdy steel frame with wood top, perfect for modern dining spaces',
-      rating: 4.8,
-    },
-    {
-      id: 2,
-      name: 'Modern Steel Chair',
-      category: 'Chairs',
-      image: 'https://images.pexels.com/photos/1082355/pexels-photo-1082355.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Ergonomic design with cushioned seat for maximum comfort',
-      rating: 4.9,
-    },
-    {
-      id: 3,
-      name: 'Display Rack Unit',
-      category: 'Racks',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Multi-tier storage solution for organized display',
-      rating: 4.7,
-    },
-    {
-      id: 4,
-      name: 'Steel Storage Cabinet',
-      category: 'Cabinets',
-      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Lockable storage with adjustable shelves for versatile use',
-      rating: 4.6,
-    },
-    {
-      id: 5,
-      name: 'Office Desk Set',
-      category: 'Tables',
-      image: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Complete workstation setup for productive office environments',
-      rating: 4.8,
-    },
-    {
-      id: 6,
-      name: 'Custom Steel Frame',
-      category: 'Custom Orders',
-      image: 'https://images.pexels.com/photos/1571461/pexels-photo-1571461.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Tailored to your exact specifications and requirements',
-      rating: 5.0,
-    },
-    {
-      id: 7,
-      name: 'Steel Bookshelf',
-      category: 'Racks',
-      image: 'https://images.pexels.com/photos/1571462/pexels-photo-1571462.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Minimalist design perfect for modern libraries and offices',
-      rating: 4.7,
-    },
-    {
-      id: 8,
-      name: 'Conference Table',
-      category: 'Tables',
-      image: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Large steel table designed for professional meeting spaces',
-      rating: 4.9,
-    },
-    {
-      id: 9,
-      name: 'Steel Bar Stool',
-      category: 'Chairs',
-      image: 'https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Industrial style bar stool with adjustable height feature',
-      rating: 4.5,
-    },
-  ];
+  // Import products from data file
+  const products = productData.map(product => ({
+    id: product.id,
+    name: product.name,
+    category: product.category,
+    image: product.baseImage,
+    description: product.description,
+    rating: product.rating,
+    price: product.price
+  }));
 
-  const categories = ['All', 'Pillers', 'Chairs', 'Racks', 'Cabinets', 'Custom Orders'];
+  const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredProducts = activeCategory === 'All' 
@@ -136,6 +73,7 @@ const ProductsPage = () => {
                     <span className="text-xs sm:text-sm font-medium text-orange-600 bg-orange-50 px-2 sm:px-3 py-1 rounded-full">
                       {product.category}
                     </span>
+                    <div className="text-sm font-bold text-slate-800">{product.price}</div>
                   </div>
                   
                   <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">{product.name}</h3>
@@ -157,10 +95,10 @@ const ProductsPage = () => {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="bg-slate-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Need Something Custom?</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-4">Need Custom Pillers?</h3>
               <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                We specialize in creating bespoke steel furniture tailored to your exact needs. 
-                From concept to completion, we bring your vision to life.
+                We specialize in creating custom pillers in steel, wood, and acrylic materials tailored to your exact specifications. 
+                From residential to commercial projects, we bring your vision to life.
               </p>
               <Link
                 to="/contact"

@@ -31,32 +31,32 @@ const HomePage = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: 'Signature Steel Pillar',
-      category: 'Premium Collection',
+      name: 'Classic Steel Piller',
+      category: 'Steel Pillers',
       image: '/white.png',
-      description: 'Architectural masterpiece combining strength with aesthetic brilliance',
+      description: 'Premium steel construction with elegant finish for modern interiors',
       rating: 4.9,
-      price: 'Custom Quote',
+      price: '₹3,500',
       badge: 'Bestseller'
     },
     {
-      id: 2,
-      name: 'Executive Steel Chair',
-      category: 'Office Luxury',
-      image: 'https://images.pexels.com/photos/1082355/pexels-photo-1082355.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Ergonomic excellence meets sophisticated design for the modern executive',
+      id: 21,
+      name: 'Classic Wooden Piller',
+      category: 'Wooden Pillers',
+      image: '/brown.png',
+      description: 'Traditional wooden piller with natural wood grain and finish',
       rating: 4.8,
-      price: 'From ₹25,000',
+      price: '₹2,800',
       badge: 'New'
     },
     {
-      id: 3,
-      name: 'Designer Display Unit',
-      category: 'Showcase Series',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Museum-quality display solution for your most precious collections',
+      id: 36,
+      name: 'Clear Acrylic Piller',
+      category: 'Acrylic Pillers',
+      image: '/white.png',
+      description: 'Crystal clear acrylic piller with transparent modern appeal',
       rating: 4.9,
-      price: 'From ₹35,000',
+      price: '₹4,200',
       badge: 'Premium'
     },
   ];
