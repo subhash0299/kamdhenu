@@ -107,8 +107,8 @@ const ContactPage = () => {
                   <MapPin className="w-16 h-16 text-orange-600 mb-4" />
                   <h3 className="text-xl font-semibold text-slate-800 mb-2">Click to Open Google Maps</h3>
                   <p className="text-slate-600 text-center px-4">
-                    No. 07, 2nd cross, 3rd main road, New Extension Area<br />
-                    Kalasipalyam, Bengaluru - 560002
+                    #1173 5the main Peenya industrial area, 2nd Stage<br />
+                    ,Hegganahalli, Bengaluru, Karnataka 560058
                   </p>
                 </div>
               </div>
