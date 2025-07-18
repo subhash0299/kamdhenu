@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
 
   const slides = [
     {
@@ -26,38 +27,71 @@ const HomePage = () => {
     },
   ];
 
-  const featuredProducts = [
-    {
-      id: 1,
-      name: 'Classic Steel Piller',
-      category: 'Wooden Pillers',
-      image: '/BlackWood/BlackWood-7.jpeg',
-      description: 'Premium steel construction with elegant finish for modern interiors',
-      rating: 4.9,
-      price: '₹3,500',
-      badge: 'Bestseller'
-    },
-    {
-      id: 21,
-      name: 'Classic Wooden Piller',
-      category: 'Wooden Pillers',
-      image: '/wooden/wood-3.jpeg',
-      description: 'Traditional wooden piller with natural wood grain and finish',
-      rating: 4.8,
-      price: '₹2,800',
-      badge: 'New'
-    },
-    {
-      id: 36,
-      name: 'Clear Acrylic Piller',
-      category: 'Acrylic Pillers',
-      image: '/white.png',
-      description: 'Crystal clear acrylic piller with transparent modern appeal',
-      rating: 4.9,
-      price: '₹4,200',
-      badge: 'Premium'
-    },
+  // All available product images
+  const allProductImages = [
+    // Steel Pillers
+    '/Steel/Steel-1.jpeg', '/Steel/Steel-2.jpeg', '/Steel/Steel-3.jpeg', '/Steel/Steel-4.jpeg', '/Steel/Steel-5.jpeg',
+    
+    // Wooden Pillers
+    '/wooden/wood-1.jpeg', '/wooden/wood-2.jpeg', '/wooden/wood-3.jpeg', '/wooden/wood-4.jpeg', '/wooden/wood-5.jpeg',
+    '/wooden/wood-6.jpeg', '/wooden/wood-7.jpeg', '/wooden/wood-8.jpeg', '/wooden/wood-9.jpeg', '/wooden/wood-10.jpeg',
+    '/wooden/wood-11.jpeg', '/wooden/wood-12.jpeg', '/wooden/wood-13.jpeg', '/wooden/wood-14.jpeg', '/wooden/wood-15.jpeg',
+    '/wooden/wood-16.jpeg', '/wooden/wood-17.jpeg', '/wooden/wood-18.jpeg', '/wooden/wood-19.jpeg', '/wooden/wood-20.jpeg',
+    
+    // Black Wood Pillers
+    '/BlackWood/BlackWood-1.jpeg', '/BlackWood/BlackWood-2.jpeg', '/BlackWood/BlackWood-3.jpeg', '/BlackWood/BlackWood-4.jpeg',
+    '/BlackWood/BlackWood-5.jpeg', '/BlackWood/BlackWood-6.jpeg', '/BlackWood/BlackWood-7.jpeg', '/BlackWood/BlackWood-8.jpeg',
+    '/BlackWood/BlackWood-9.jpeg', '/BlackWood/BlackWood-10.jpeg',
+    
+    // Small Wood Pillers
+    '/SmallWood/SmallWood-1.jpeg', '/SmallWood/SmallWood-2.jpeg', '/SmallWood/SmallWood-3.jpeg', '/SmallWood/SmallWood-4.jpeg',
+    '/SmallWood/SmallWood-5.jpeg', '/SmallWood/SmallWood-6.jpeg', '/SmallWood/SmallWood-7.jpeg', '/SmallWood/SmallWood-8.jpeg',
+    '/SmallWood/SmallWood-9.jpeg',
+    
+    // Big Acrylic Pillers
+    '/BigAcrylic/BigAcrylic-1.jpeg', '/BigAcrylic/BigAcrylic-2.jpeg', '/BigAcrylic/BigAcrylic-3.jpeg', '/BigAcrylic/BigAcrylic-4.jpeg',
+    '/BigAcrylic/BigAcrylic-5.jpeg', '/BigAcrylic/BigAcrylic-6.jpeg', '/BigAcrylic/BigAcrylic-7.jpeg', '/BigAcrylic/BigAcrylic-8.jpeg',
+    '/BigAcrylic/BigAcrylic-9.jpeg', '/BigAcrylic/BigAcrylic-10.jpeg',
+    
+    // Small Acrylic Pillers
+    '/SmallAcrylic/Untitled-1.jpeg', '/SmallAcrylic/Untitled-2.jpeg', '/SmallAcrylic/Untitled-3.jpeg', '/SmallAcrylic/Untitled-4.jpeg',
+    '/SmallAcrylic/Untitled-5.jpeg', '/SmallAcrylic/Untitled-6.jpeg', '/SmallAcrylic/Untitled-7.jpeg', '/SmallAcrylic/Untitled-8.jpeg',
+    '/SmallAcrylic/Untitled-9.jpeg', '/SmallAcrylic/Untitled-10.jpeg', '/SmallAcrylic/Untitled-11.jpeg', '/SmallAcrylic/Untitled-12.jpeg',
+    '/SmallAcrylic/Untitled-13.jpeg', '/SmallAcrylic/Untitled-14.jpeg', '/SmallAcrylic/Untitled-15.jpeg',
+    
+    // Middle Acrylic Pillers
+    '/MiddleAcrylic/black.jpeg', '/MiddleAcrylic/blue.jpeg', '/MiddleAcrylic/dark-purple.jpeg', '/MiddleAcrylic/dark-wood.jpeg',
+    '/MiddleAcrylic/light-orange.jpeg', '/MiddleAcrylic/orange.jpeg', '/MiddleAcrylic/white.jpeg', '/MiddleAcrylic/yellow.jpeg'
   ];
+
+  const productNames = [
+    'Classic Steel Piller', 'Royal Steel Piller', 'Modern Steel Piller', 'Industrial Steel Piller', 'Decorative Steel Piller',
+    'Classic Wooden Piller', 'Carved Wooden Piller', 'Modern Wooden Piller', 'Rustic Wooden Piller', 'Polished Wooden Piller',
+    'Premium Black Wood Piller', 'Elegant Black Wood Piller', 'Luxury Black Wood Piller', 'Designer Black Wood Piller',
+    'Clear Acrylic Piller', 'Frosted Acrylic Piller', 'Colored Acrylic Piller', 'Textured Acrylic Piller', 'LED Acrylic Piller',
+    'Gradient Acrylic Piller', 'Mirror Acrylic Piller', 'Etched Acrylic Piller', 'Premium Acrylic Piller'
+  ];
+
+  const categories = ['Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers'];
+  const badges = ['Bestseller', 'New', 'Premium', 'Popular', 'Featured'];
+  const prices = ['₹2,500', '₹3,200', '₹3,800', '₹4,500', '₹5,200', '₹6,000', '₹6,800', '₹7,500'];
+
+  // Function to generate random featured products
+  const generateRandomProducts = () => {
+    const shuffledImages = [...allProductImages].sort(() => Math.random() - 0.5);
+    const selectedImages = shuffledImages.slice(0, 5);
+    
+    return selectedImages.map((image, index) => ({
+      id: Math.floor(Math.random() * 1000) + index,
+      name: productNames[Math.floor(Math.random() * productNames.length)],
+      category: categories[Math.floor(Math.random() * categories.length)],
+      image: image,
+      description: 'Premium quality piller with elegant finish for modern interiors and commercial spaces',
+      rating: (4.5 + Math.random() * 0.5).toFixed(1),
+      price: prices[Math.floor(Math.random() * prices.length)],
+      badge: badges[Math.floor(Math.random() * badges.length)]
+    }));
+  };
 
   const luxuryFeatures = [
     {
@@ -87,11 +121,22 @@ const HomePage = () => {
   ];
 
   useEffect(() => {
+    // Initialize with random products
+    setFeaturedProducts(generateRandomProducts());
+    
+    // Change products every 8 seconds
+    const productTimer = setInterval(() => {
+      setFeaturedProducts(generateRandomProducts());
+    }, 8000);
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      clearInterval(productTimer);
+    };
   }, [slides.length]);
 
   const nextSlide = () => {
