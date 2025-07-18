@@ -144,24 +144,37 @@ const GalleryPage = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-orange-600 text-white">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(251,146,60,0.3),transparent_70%)]" />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">How We Work</h1>
-          <p className="text-xl text-slate-1000 max-w-2xl mx-auto">
+          <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6 shadow-lg">
+            Behind the Scenes
+          </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            How We
+            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+              Work
+            </span>
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Take a behind-the-scenes look at our craftsmanship and attention to detail in every step of our process
           </p>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-24">
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="relative group overflow-hidden rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
                 {item.type === 'video' ? (
                   <VideoPlayer item={item} index={index} />
@@ -170,12 +183,12 @@ const GalleryPage = () => {
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
-                        <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">{item.title}</h3>
+                        <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg">{item.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -185,19 +198,19 @@ const GalleryPage = () => {
           </div>
 
           {/* Process Steps */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
             {[
               { step: '01', title: 'Design', description: 'Custom design based on your requirements' },
               { step: '02', title: 'Cut & Shape', description: 'Precision cutting and shaping of steel' },
               { step: '03', title: 'Weld & Finish', description: 'Expert welding and surface finishing' },
               { step: '04', title: 'Deliver', description: 'Quality check and delivery to your location' },
             ].map((process, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-3 sm:mb-4 group-hover:bg-orange-700 transition-colors">
+              <div key={index} className="text-center group hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
                   {process.step}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2">{process.title}</h3>
-                <p className="text-sm sm:text-base text-slate-600 px-2">{process.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 group-hover:text-orange-600 transition-colors">{process.title}</h3>
+                <p className="text-sm sm:text-base text-slate-600 px-2 leading-relaxed">{process.description}</p>
               </div>
             ))}
           </div>

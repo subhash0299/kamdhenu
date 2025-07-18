@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Award, Users, Clock, ArrowRight, Play, CheckCircle, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState({});
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const slides = [
     {
@@ -66,29 +64,25 @@ const HomePage = () => {
       icon: Award,
       title: 'Master Craftsmanship',
       description: 'Each piece is meticulously handcrafted by our master artisans with over 15 years of expertise',
-      metric: '15+ Years',
-      delay: 0
+      metric: '15+ Years'
     },
     {
       icon: Users,
       title: 'Elite Clientele',
       description: 'Trusted by luxury hotels, premium offices, and discerning homeowners across India',
-      metric: '500+ Clients',
-      delay: 200
+      metric: '500+ Clients'
     },
     {
       icon: CheckCircle,
       title: 'Bespoke Solutions',
       description: 'Every creation is uniquely designed and tailored to your specific vision and requirements',
-      metric: '1000+ Projects',
-      delay: 400
+      metric: '1000+ Projects'
     },
     {
       icon: Sparkles,
       title: 'Lifetime Excellence',
       description: 'Premium materials and superior craftsmanship backed by our comprehensive warranty',
-      metric: '5 Year Warranty',
-      delay: 600
+      metric: '5 Year Warranty'
     },
   ];
 
@@ -99,28 +93,6 @@ const HomePage = () => {
 
     return () => clearInterval(timer);
   }, [slides.length]);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(prev => ({
-              ...prev,
-              [entry.target.id]: true
-            }));
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -190,27 +162,27 @@ const HomePage = () => {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-6 animate-fade-in-up">
-              <span className="inline-block px-4 py-2 bg-orange-600/20 backdrop-blur-sm border border-orange-400/30 rounded-full text-orange-300 text-sm font-medium mb-4">
+            <div className="mb-6">
+              <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 backdrop-blur-sm border border-orange-400/30 rounded-full text-orange-300 text-sm font-medium mb-4 shadow-lg">
                 ✨ Premium Steel Furniture Specialists
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
               <span className="block bg-gradient-to-r from-white via-orange-100 to-white bg-clip-text text-transparent">
                 {slides[currentSlide].title}
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-orange-200 mb-4 font-light animate-fade-in-up animation-delay-400">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-orange-200 mb-4 font-light">
               {slides[currentSlide].subtitle}
             </p>
             
-            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-600">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
               {slides[currentSlide].description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/products"
                 className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
@@ -222,10 +194,13 @@ const HomePage = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               </Link>
               
-              <button className="group flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300">
+              <Link
+                to="/gallery"
+                className="group flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
+              >
                 <Play className="w-5 h-5" />
                 <span>Watch Process</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -247,48 +222,30 @@ const HomePage = () => {
       </section>
 
       {/* Premium Features Section */}
-      <section 
-        id="features"
-        className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden"
-        ref={(el) => {
-          if (el && observerRef.current) {
-            observerRef.current.observe(el);
-          }
-        }}
-      >
+      <section className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className={`transition-all duration-1000 ${isVisible.features ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
-                Why Choose Excellence
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Why Choose Excellence
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+              Crafted for the
+              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                Extraordinary
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
-                Crafted for the
-                <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
-                  Extraordinary
-                </span>
-              </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Every piece tells a story of uncompromising quality, innovative design, and masterful execution
-              </p>
-            </div>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Every piece tells a story of uncompromising quality, innovative design, and masterful execution
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {luxuryFeatures.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div
-                  key={index}
-                  className={`group relative transition-all duration-1000 ${
-                    isVisible.features 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-10'
-                  }`}
-                  style={{ transitionDelay: `${feature.delay}ms` }}
-                >
+                <div key={index} className="group relative">
                   <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:-translate-y-2 overflow-hidden">
                     {/* Gradient Background on Hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -314,15 +271,7 @@ const HomePage = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section 
-        id="products"
-        className="py-32 bg-slate-900 relative overflow-hidden"
-        ref={(el) => {
-          if (el && observerRef.current) {
-            observerRef.current.observe(el);
-          }
-        }}
-      >
+      <section className="py-32 bg-slate-900 relative overflow-hidden">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.3),transparent_70%)]" />
@@ -330,40 +279,30 @@ const HomePage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <div className={`transition-all duration-1000 ${isVisible.products ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="inline-block px-4 py-2 bg-orange-600/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-4">
-                Signature Collection
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Signature Collection
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Masterpiece
+              <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                Creations
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Masterpiece
-                <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                  Creations
-                </span>
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                Discover our most coveted designs, each piece a testament to exceptional craftsmanship
-              </p>
-            </div>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Discover our most coveted designs, each piece a testament to exceptional craftsmanship
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
-              <div
-                key={product.id}
-                className={`group relative transition-all duration-1000 ${
-                  isVisible.products 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
-              >
+              <div key={product.id} className="group relative">
                 <div className="relative bg-white rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 overflow-hidden group-hover:-translate-y-3">
                   {/* Product Badge */}
                   <div className="absolute top-6 left-6 z-20">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      product.badge === 'Bestseller' ? 'bg-green-500 text-white' :
-                      product.badge === 'New' ? 'bg-blue-500 text-white' :
-                      'bg-purple-500 text-white'
+                    <span className={`px-4 py-2 rounded-full text-xs font-semibold shadow-lg ${
+                      product.badge === 'Bestseller' ? 'bg-gradient-to-r from-green-500 to-green-600 text-white' :
+                      product.badge === 'New' ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white' :
+                      'bg-gradient-to-r from-purple-500 to-purple-600 text-white'
                     }`}>
                       {product.badge}
                     </span>
@@ -398,7 +337,7 @@ const HomePage = () => {
                     <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
                     
                     <div className="flex items-center justify-between mb-6">
-                      <div className="text-2xl font-bold text-slate-800">{product.price}</div>
+                      <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">{product.price}</div>
                     </div>
                     
                     <Link
@@ -432,12 +371,12 @@ const HomePage = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl animate-pulse animation-delay-1000" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl animate-pulse" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block px-4 py-2 bg-orange-600/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-8 shadow-lg">
               Ready to Begin Your Journey?
             </span>
             
