@@ -338,7 +338,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             {featuredProducts.map((product, index) => (
               <div key={product.id} className="group relative">
                 <div className="relative bg-white rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 overflow-hidden group-hover:-translate-y-3">
@@ -352,7 +352,6 @@ const HomePage = () => {
                       {product.badge}
                     </span>
                   </div>
-
                   {/* Product Image */}
                   <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 p-8 h-80">
                     <img
@@ -360,31 +359,19 @@ const HomePage = () => {
                       alt={product.name}
                       className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                     />
-                    
                     {/* Rating Badge */}
                     <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1 shadow-lg">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-sm font-semibold text-slate-800">{product.rating}</span>
                     </div>
                   </div>
-                  
+                  {/* Removed name, description, and price */}
                   <div className="p-8">
                     <div className="mb-4">
                       <span className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
                         {product.category}
                       </span>
                     </div>
-                    
-                    <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-orange-600 transition-colors">
-                      {product.name}
-                    </h3>
-                    
-                    <p className="text-slate-600 mb-6 leading-relaxed">{product.description}</p>
-                    
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">{product.price}</div>
-                    </div>
-                    
                     <Link
                       to={`/products/${product.id}`}
                       className="group/btn relative w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2 overflow-hidden"
