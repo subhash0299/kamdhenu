@@ -1579,8 +1579,8 @@ export const productData: Product[] = [
   {
     id: 56,
     name: 'Premium Acrylic Piller',
-    category: 'Wooden Pillers',
-    baseImage: '/wooden/wood-30.jpeg',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/blue.jpeg',
     description: 'Top-tier acrylic piller with luxury finishes and features',
     fullDescription: 'Our Premium Acrylic Piller represents the finest in acrylic craftsmanship, combining superior materials, advanced manufacturing techniques, and luxury finishes for discerning customers.',
     rating: 4.9,
@@ -1591,10 +1591,14 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹7,500',
     colors: [
-      { name: 'Premium Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Luxury White', code: '#FFFEF7', image: '/white.png' },
-      { name: 'Elite Blue', code: '#0F52BA', image: '/blue.png' },
-      { name: 'Platinum Finish', code: '#E5E4E2', image: '/white.png' }
+      { name: 'Premium Clear', code: '#15537b', image: '/SmallAcrylic/blue.jpeg' },
+      { name: 'Luxury White', code: '#9b3d17', image: '/SmallAcrylic/brown.jpeg' },
+      { name: 'Elite Blue', code: '#56392c', image: '/SmallAcrylic/dark-wood.jpeg' },
+      { name: 'Platinum Finish', code: '#156e18', image: '/SmallAcrylic/green.jpeg' },
+      { name: 'Premium Clear', code: '#d98f0e', image: '/SmallAcrylic/orange.jpeg' },
+      { name: 'Luxury White', code: '#c01739', image: '/SmallAcrylic/pink.jpeg' },
+      { name: 'Elite Blue', code: '#d6cab6', image: '/SmallAcrylic/white.jpeg' },
+      { name: 'Platinum Finish', code: '#d9bd77', image: '/SmallAcrylic/yellow.jpeg' }
     ],
     features: [
       'Premium materials',
