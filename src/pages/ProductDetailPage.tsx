@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, Shield, Truck, Award } from 'lucide-react';
 import { productData } from '../data/productData';
 
 const ProductDetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   
   const product = productData.find(p => p.id === parseInt(id || '1'));
   const [selectedColor, setSelectedColor] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(product?.colors[0].image || '');
+  const [selectedImage, setSelectedImage] = useState(
+    product?.colors && product.colors.length > 0
+      ? product.colors[0].image
+      : product?.baseImage || ''
+  );
 
   if (!product) {
     return (
@@ -25,7 +30,11 @@ const ProductDetailPage = () => {
 
   const handleColorChange = (colorIndex: number) => {
     setSelectedColor(colorIndex);
-    setSelectedImage(product.colors[colorIndex].image);
+    if (product.colors && product.colors[colorIndex]) {
+      setSelectedImage(product.colors[colorIndex].image);
+    } else {
+      setSelectedImage(product.baseImage || '');
+    }
   };
 
   return (
@@ -48,7 +57,11 @@ const ProductDetailPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back Button */}
           <Link
-            to="/products"
+            to="#"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(-1);
+            }}
             className="inline-flex items-center space-x-2 text-slate-600 hover:text-orange-600 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />

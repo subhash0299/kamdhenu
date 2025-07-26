@@ -39,12 +39,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹3,500',
     colors: [
-      { name: 'White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Yellow', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Pink', code: '#d5001a', image: '/pink.png' },
-      { name: 'Blue', code: '#00568d', image: '/blue.png' },
-      { name: 'Orange', code: '#c04600', image: '/orange.png' },
-      { name: 'Brown', code: '#986c44', image: '/brown.png' }
     ],
     features: [
       'Corrosion-resistant coating',
@@ -69,11 +63,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹5,200',
     colors: [
-      { name: 'White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Yellow Gold', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Rose Gold', code: '#d5001a', image: '/pink.png' },
-      { name: 'Royal Blue', code: '#00568d', image: '/blue.png' },
-      { name: 'Bronze', code: '#c04600', image: '/orange.png' }
     ],
     features: [
       'Ornate decorative elements',
@@ -98,10 +87,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹2,800',
     colors: [
-      { name: 'Matte White', code: '#F8F9FA', image: '/white.png' },
-      { name: 'Brushed Steel', code: '#C0C0C0', image: '/yellow-light.png' },
-      { name: 'Charcoal', code: '#36454F', image: '/brown.png' },
-      { name: 'Navy', code: '#00568d', image: '/blue.png' }
     ],
     features: [
       'Minimalist design',
@@ -126,10 +111,6 @@ export const productData: Product[] = [
     warranty: '7 years',
     price: '₹6,800',
     colors: [
-      { name: 'Industrial Gray', code: '#71797E', image: '/white.png' },
-      { name: 'Safety Yellow', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Warning Orange', code: '#c04600', image: '/orange.png' },
-      { name: 'Steel Blue', code: '#00568d', image: '/blue.png' }
     ],
     features: [
       'Extra heavy-duty construction',
@@ -154,10 +135,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹4,200',
     colors: [
-      { name: 'Antique White', code: '#FAEBD7', image: '/white.png' },
-      { name: 'Gold Leaf', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Copper', code: '#c04600', image: '/orange.png' },
-      { name: 'Pewter', code: '#71797E', image: '/brown.png' }
     ],
     features: [
       'Artistic pattern design',
@@ -182,10 +159,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹2,200',
     colors: [
-      { name: 'Pure White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Light Gray', code: '#D3D3D3', image: '/yellow-light.png' },
-      { name: 'Black', code: '#000000', image: '/brown.png' },
-      { name: 'Silver', code: '#C0C0C0', image: '/blue.png' }
     ],
     features: [
       'Space-efficient design',
@@ -210,10 +183,6 @@ export const productData: Product[] = [
     warranty: '10 years',
     price: '₹8,500',
     colors: [
-      { name: 'Industrial White', code: '#F5F5F5', image: '/white.png' },
-      { name: 'Safety Yellow', code: '#FFFF00', image: '/yellow1.png' },
-      { name: 'Warning Red', code: '#FF0000', image: '/pink.png' },
-      { name: 'Steel Gray', code: '#71797E', image: '/brown.png' }
     ],
     features: [
       'Maximum load capacity',
@@ -238,10 +207,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹4,800',
     colors: [
-      { name: 'Pearl White', code: '#F8F6F0', image: '/white.png' },
-      { name: 'Champagne', code: '#F7E7CE', image: '/yellow-light.png' },
-      { name: 'Rose Gold', code: '#E8B4B8', image: '/pink.png' },
-      { name: 'Platinum', code: '#E5E4E2', image: '/blue.png' }
     ],
     features: [
       'Sophisticated design',
@@ -266,10 +231,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹3,900',
     colors: [
-      { name: 'Textured White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Hammered Gold', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Brushed Bronze', code: '#c04600', image: '/orange.png' },
-      { name: 'Oxidized Steel', code: '#71797E', image: '/brown.png' }
     ],
     features: [
       'Unique textured surface',
@@ -294,11 +255,6 @@ export const productData: Product[] = [
     warranty: '7 years',
     price: '₹7,200',
     colors: [
-      { name: 'Luxury White', code: '#FFFEF7', image: '/white.png' },
-      { name: '24K Gold', code: '#FFD700', image: '/yellow1.png' },
-      { name: 'Ruby Red', code: '#E0115F', image: '/pink.png' },
-      { name: 'Sapphire Blue', code: '#0F52BA', image: '/blue.png' },
-      { name: 'Titanium', code: '#878681', image: '/brown.png' }
     ],
     features: [
       'Premium grade materials',
@@ -323,10 +279,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹1,800',
     colors: [
-      { name: 'Home White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Warm Beige', code: '#F5F5DC', image: '/yellow-light.png' },
-      { name: 'Soft Gray', code: '#D3D3D3', image: '/brown.png' },
-      { name: 'Cream', code: '#FFFDD0', image: '/blue.png' }
     ],
     features: [
       'Residential-friendly size',
@@ -351,10 +303,6 @@ export const productData: Product[] = [
     warranty: '6 years',
     price: '₹6,500',
     colors: [
-      { name: 'Architect White', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Designer Gold', code: '#DAA520', image: '/yellow1.png' },
-      { name: 'Statement Red', code: '#DC143C', image: '/pink.png' },
-      { name: 'Modern Blue', code: '#4169E1', image: '/blue.png' }
     ],
     features: [
       'Architectural design',
@@ -379,10 +327,6 @@ export const productData: Product[] = [
     warranty: '8 years',
     price: '₹4,500',
     colors: [
-      { name: 'Weather White', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Storm Gray', code: '#708090', image: '/brown.png' },
-      { name: 'Ocean Blue', code: '#006994', image: '/blue.png' },
-      { name: 'Forest Green', code: '#228B22', image: '/yellow-light.png' }
     ],
     features: [
       'Weather-resistant coating',
@@ -407,11 +351,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: 'Quote on Request',
     colors: [
-      { name: 'Custom White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Custom Gold', code: '#d4a835', image: '/yellow1.png' },
-      { name: 'Custom Red', code: '#d5001a', image: '/pink.png' },
-      { name: 'Custom Blue', code: '#00568d', image: '/blue.png' },
-      { name: 'Custom Bronze', code: '#c04600', image: '/orange.png' }
     ],
     features: [
       'Fully customizable',
@@ -436,10 +375,6 @@ export const productData: Product[] = [
     warranty: '8 years',
     price: '₹7,800',
     colors: [
-      { name: 'Reinforced White', code: '#FFFAFA', image: '/white.png' },
-      { name: 'Steel Yellow', code: '#FFFF99', image: '/yellow1.png' },
-      { name: 'Safety Orange', code: '#FF4500', image: '/orange.png' },
-      { name: 'Industrial Blue', code: '#4682B4', image: '/blue.png' }
     ],
     features: [
       'Reinforced construction',
@@ -464,10 +399,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹5,500',
     colors: [
-      { name: 'Mirror White', code: '#F8F8F8', image: '/white.png' },
-      { name: 'Polished Gold', code: '#FFD700', image: '/yellow1.png' },
-      { name: 'Chrome Silver', code: '#C0C0C0', image: '/blue.png' },
-      { name: 'Polished Bronze', code: '#CD7F32', image: '/orange.png' }
     ],
     features: [
       'Mirror-like finish',
@@ -492,10 +423,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹3,200',
     colors: [
-      { name: 'Matte White', code: '#F5F5F5', image: '/white.png' },
-      { name: 'Matte Black', code: '#28282B', image: '/brown.png' },
-      { name: 'Matte Gray', code: '#808080', image: '/blue.png' },
-      { name: 'Matte Beige', code: '#F5F5DC', image: '/yellow-light.png' }
     ],
     features: [
       'Non-reflective finish',
@@ -520,10 +447,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹4,600',
     colors: [
-      { name: 'Antique White', code: '#FAEBD7', image: '/white.png' },
-      { name: 'Aged Brass', code: '#B5651D', image: '/yellow1.png' },
-      { name: 'Rust Red', code: '#B7410E', image: '/pink.png' },
-      { name: 'Patina Green', code: '#708090', image: '/blue.png' }
     ],
     features: [
       'Vintage-inspired design',
@@ -548,10 +471,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹5,800',
     colors: [
-      { name: 'Spiral White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Twisted Gold', code: '#FFD700', image: '/yellow1.png' },
-      { name: 'Copper Spiral', code: '#B87333', image: '/orange.png' },
-      { name: 'Steel Twist', code: '#71797E', image: '/brown.png' }
     ],
     features: [
       'Unique spiral design',
@@ -576,10 +495,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹4,900',
     colors: [
-      { name: 'Classical White', code: '#FFF8DC', image: '/white.png' },
-      { name: 'Marble Gold', code: '#DAA520', image: '/yellow1.png' },
-      { name: 'Stone Gray', code: '#708090', image: '/brown.png' },
-      { name: 'Ivory', code: '#FFFFF0', image: '/blue.png' }
     ],
     features: [
       'Classical fluted design',
@@ -606,10 +521,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹2,800',
     colors: [
-      { name: 'Natural Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Dark Walnut', code: '#654321', image: '/brown.png' },
-      { name: 'Light Pine', code: '#FFEAA7', image: '/yellow-light.png' },
-      { name: 'Cherry Wood', code: '#DE3163', image: '/pink.png' }
     ],
     features: [
       'Natural wood grain',
@@ -634,10 +545,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,500',
     colors: [
-      { name: 'Carved Teak', code: '#B8860B', image: '/brown.png' },
-      { name: 'Mahogany', code: '#C04000', image: '/orange.png' },
-      { name: 'Rosewood', code: '#65000B', image: '/pink.png' },
-      { name: 'Sandalwood', code: '#F4A460', image: '/yellow-light.png' }
     ],
     features: [
       'Hand-carved details',
@@ -662,10 +569,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹2,200',
     colors: [
-      { name: 'Modern Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Bleached Pine', code: '#F5DEB3', image: '/yellow-light.png' },
-      { name: 'Ebony Black', code: '#555D50', image: '/brown.png' },
-      { name: 'Ash Gray', code: '#B2BEB5', image: '/blue.png' }
     ],
     features: [
       'Contemporary design',
@@ -690,10 +593,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,200',
     colors: [
-      { name: 'Weathered Gray', code: '#8C92AC', image: '/brown.png' },
-      { name: 'Barn Red', code: '#7C0A02', image: '/pink.png' },
-      { name: 'Driftwood', code: '#A0522D', image: '/brown.png' },
-      { name: 'Aged Pine', code: '#FFEAA7', image: '/yellow-light.png' }
     ],
     features: [
       'Rustic character',
@@ -718,10 +617,6 @@ export const productData: Product[] = [
     warranty: '4 years',
     price: '₹3,800',
     colors: [
-      { name: 'Polished Mahogany', code: '#C04000', image: '/orange.png' },
-      { name: 'Glossy Walnut', code: '#654321', image: '/brown.png' },
-      { name: 'Shiny Cherry', code: '#DE3163', image: '/pink.png' },
-      { name: 'Lacquered Oak', code: '#DEB887', image: '/yellow-light.png' }
     ],
     features: [
       'High-gloss finish',
@@ -746,10 +641,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹2,000',
     colors: [
-      { name: 'Natural Bamboo', code: '#E3DAC9', image: '/yellow-light.png' },
-      { name: 'Carbonized Bamboo', code: '#8B4513', image: '/brown.png' },
-      { name: 'Blonde Bamboo', code: '#F5DEB3', image: '/yellow-light.png' },
-      { name: 'Caramel Bamboo', code: '#D2691E', image: '/orange.png' }
     ],
     features: [
       'Eco-friendly material',
@@ -774,10 +665,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹2,600',
     colors: [
-      { name: 'Dark Espresso', code: '#3C2415', image: '/brown.png' },
-      { name: 'Golden Oak', code: '#B8860B', image: '/yellow1.png' },
-      { name: 'Red Mahogany', code: '#C04000', image: '/pink.png' },
-      { name: 'Gray Wash', code: '#8C92AC', image: '/blue.png' }
     ],
     features: [
       'Rich stain colors',
@@ -802,10 +689,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,600',
     colors: [
-      { name: 'Turned Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Maple Cream', code: '#F5DEB3', image: '/yellow-light.png' },
-      { name: 'Walnut Brown', code: '#654321', image: '/brown.png' },
-      { name: 'Cherry Red', code: '#DE3163', image: '/pink.png' }
     ],
     features: [
       'Lathe-turned precision',
@@ -830,10 +713,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,000',
     colors: [
-      { name: 'Weathered Barn', code: '#8C7853', image: '/brown.png' },
-      { name: 'Aged Teak', code: '#B8860B', image: '/yellow1.png' },
-      { name: 'Vintage Pine', code: '#FFEAA7', image: '/yellow-light.png' },
-      { name: 'Salvaged Oak', code: '#DEB887', image: '/brown.png' }
     ],
     features: [
       'Reclaimed materials',
@@ -858,10 +737,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹2,400',
     colors: [
-      { name: 'Classic White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Sunny Yellow', code: '#FFFF00', image: '/yellow1.png' },
-      { name: 'Ocean Blue', code: '#0077BE', image: '/blue.png' },
-      { name: 'Forest Green', code: '#228B22', image: '/yellow-light.png' }
     ],
     features: [
       'Versatile color options',
@@ -886,10 +761,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹2,800',
     colors: [
-      { name: 'Composite Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Synthetic Teak', code: '#B8860B', image: '/yellow1.png' },
-      { name: 'Faux Mahogany', code: '#C04000', image: '/orange.png' },
-      { name: 'Engineered Pine', code: '#FFEAA7', image: '/yellow-light.png' }
     ],
     features: [
       'Enhanced durability',
@@ -914,10 +785,6 @@ export const productData: Product[] = [
     warranty: '4 years',
     price: '₹6,500',
     colors: [
-      { name: 'Purple Heart', code: '#8B008B', image: '/pink.png' },
-      { name: 'Zebrawood', code: '#F5DEB3', image: '/yellow-light.png' },
-      { name: 'Padauk', code: '#FF6347', image: '/orange.png' },
-      { name: 'Ebony', code: '#555D50', image: '/brown.png' }
     ],
     features: [
       'Rare exotic woods',
@@ -942,10 +809,6 @@ export const productData: Product[] = [
     warranty: '4 years',
     price: '₹2,900',
     colors: [
-      { name: 'Laminated Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Birch Ply', code: '#F5DEB3', image: '/yellow-light.png' },
-      { name: 'Maple Veneer', code: '#FAEBD7', image: '/white.png' },
-      { name: 'Walnut Layer', code: '#654321', image: '/brown.png' }
     ],
     features: [
       'Superior strength',
@@ -970,10 +833,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,100',
     colors: [
-      { name: 'Wire Brushed Oak', code: '#DEB887', image: '/brown.png' },
-      { name: 'Hand Scraped Pine', code: '#FFEAA7', image: '/yellow-light.png' },
-      { name: 'Distressed Walnut', code: '#654321', image: '/brown.png' },
-      { name: 'Sandblasted Teak', code: '#B8860B', image: '/yellow1.png' }
     ],
     features: [
       'Unique surface textures',
@@ -998,10 +857,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹5,200',
     colors: [
-      { name: 'Premium Walnut', code: '#654321', image: '/brown.png' },
-      { name: 'Luxury Mahogany', code: '#C04000', image: '/orange.png' },
-      { name: 'Elite Cherry', code: '#DE3163', image: '/pink.png' },
-      { name: 'Royal Oak', code: '#DEB887', image: '/yellow-light.png' }
     ],
     features: [
       'Premium materials',
@@ -1028,10 +883,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,200',
     colors: [
-      { name: 'Crystal Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Ultra Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Diamond Clear', code: '#FFFAFA', image: '/white.png' },
-      { name: 'Pure Transparent', code: '#FFFFFF', image: '/white.png' }
     ],
     features: [
       'Crystal clear transparency',
@@ -1056,10 +907,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,800',
     colors: [
-      { name: 'Frosted White', code: '#F5F5F5', image: '/white.png' },
-      { name: 'Ice Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Pearl Gray', code: '#E8E8E8', image: '/white.png' },
-      { name: 'Soft Pink', code: '#FFE4E6', image: '/pink.png' }
     ],
     features: [
       'Frosted finish',
@@ -1084,11 +931,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹3,600',
     colors: [
-      { name: 'Ocean Blue', code: '#0077BE', image: '/blue.png' },
-      { name: 'Sunset Orange', code: '#FF8C00', image: '/orange.png' },
-      { name: 'Ruby Red', code: '#E0115F', image: '/pink.png' },
-      { name: 'Emerald Green', code: '#50C878', image: '/yellow-light.png' },
-      { name: 'Amethyst Purple', code: '#9966CC', image: '/pink.png' }
     ],
     features: [
       'Vibrant colors',
@@ -1113,10 +955,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,000',
     colors: [
-      { name: 'Textured Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Ripple White', code: '#FFFAFA', image: '/white.png' },
-      { name: 'Wave Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Diamond Pattern', code: '#F0F8FF', image: '/white.png' }
     ],
     features: [
       'Unique surface textures',
@@ -1141,10 +979,6 @@ export const productData: Product[] = [
     warranty: '4 years',
     price: '₹5,500',
     colors: [
-      { name: 'LED White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'RGB Compatible', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Warm Light', code: '#FFF8DC', image: '/yellow-light.png' },
-      { name: 'Cool Light', code: '#E6F3FF', image: '/blue.png' }
     ],
     features: [
       'LED integration ready',
@@ -1169,10 +1003,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,800',
     colors: [
-      { name: 'Blue to Clear', code: '#0077BE', image: '/blue.png' },
-      { name: 'Pink to White', code: '#FFB6C1', image: '/pink.png' },
-      { name: 'Yellow to Orange', code: '#FFD700', image: '/yellow1.png' },
-      { name: 'Purple to Clear', code: '#9966CC', image: '/pink.png' }
     ],
     features: [
       'Gradient color effects',
@@ -1197,10 +1027,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,400',
     colors: [
-      { name: 'Silver Mirror', code: '#C0C0C0', image: '/white.png' },
-      { name: 'Gold Mirror', code: '#FFD700', image: '/yellow1.png' },
-      { name: 'Bronze Mirror', code: '#CD7F32', image: '/orange.png' },
-      { name: 'Rose Gold Mirror', code: '#E8B4B8', image: '/pink.png' }
     ],
     features: [
       'Highly reflective surface',
@@ -1225,10 +1051,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,200',
     colors: [
-      { name: 'Etched Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Frosted Etch', code: '#F5F5F5', image: '/white.png' },
-      { name: 'Tinted Etch', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Colored Etch', code: '#FFE4E6', image: '/pink.png' }
     ],
     features: [
       'Precision etched patterns',
@@ -1253,10 +1075,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹6,800',
     colors: [
-      { name: 'Thick Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Heavy Frosted', code: '#F5F5F5', image: '/white.png' },
-      { name: 'Solid Blue', code: '#0077BE', image: '/blue.png' },
-      { name: 'Dense White', code: '#FFFFFF', image: '/white.png' }
     ],
     features: [
       'Extra thickness',
@@ -1281,10 +1099,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹4,600',
     colors: [
-      { name: 'Flexible Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Bendable Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Curved White', code: '#FFFAFA', image: '/white.png' },
-      { name: 'Shapeable Pink', code: '#FFE4E6', image: '/pink.png' }
     ],
     features: [
       'Bendable material',
@@ -1309,10 +1123,6 @@ export const productData: Product[] = [
     warranty: '4 years',
     price: '₹5,000',
     colors: [
-      { name: 'Anti-Static Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Static-Free White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Clean Room Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Dust-Free Gray', code: '#F5F5F5', image: '/white.png' }
     ],
     features: [
       'Anti-static properties',
@@ -1337,10 +1147,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹4,800',
     colors: [
-      { name: 'UV Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Sun-Safe White', code: '#FFFAFA', image: '/white.png' },
-      { name: 'Weather Blue', code: '#0077BE', image: '/blue.png' },
-      { name: 'Outdoor Gray', code: '#E8E8E8', image: '/white.png' }
     ],
     features: [
       'UV protection',
@@ -1365,10 +1171,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,800',
     colors: [
-      { name: 'Prismatic Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Rainbow Effect', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Spectrum Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Light Prism', code: '#F8F8FF', image: '/white.png' }
     ],
     features: [
       'Prismatic light effects',
@@ -1393,10 +1195,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,400',
     colors: [
-      { name: 'Magnetic Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Attachment White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'System Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Modular Gray', code: '#F5F5F5', image: '/white.png' }
     ],
     features: [
       'Magnetic attachment system',
@@ -1421,10 +1219,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹7,500',
     colors: [
-      { name: 'Premium Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Luxury White', code: '#FFFEF7', image: '/white.png' },
-      { name: 'Elite Blue', code: '#0F52BA', image: '/blue.png' },
-      { name: 'Platinum Finish', code: '#E5E4E2', image: '/white.png' }
     ],
     features: [
       'Premium materials',
@@ -1450,10 +1244,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,800',
     colors: [
-      { name: 'Prismatic Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Rainbow Effect', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Spectrum Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Light Prism', code: '#F8F8FF', image: '/white.png' }
     ],
     features: [
       'Prismatic light effects',
@@ -1478,10 +1268,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,400',
     colors: [
-      { name: 'Magnetic Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Attachment White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'System Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Modular Gray', code: '#F5F5F5', image: '/white.png' }
     ],
     features: [
       'Magnetic attachment system',
@@ -1506,10 +1292,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹7,500',
     colors: [
-      { name: 'Premium Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Luxury White', code: '#FFFEF7', image: '/white.png' },
-      { name: 'Elite Blue', code: '#0F52BA', image: '/blue.png' },
-      { name: 'Platinum Finish', code: '#E5E4E2', image: '/white.png' }
     ],
     features: [
       'Premium materials',
@@ -1535,10 +1317,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,800',
     colors: [
-      { name: 'Prismatic Clear', code: '#F0F8FF', image: '/white.png' },
-      { name: 'Rainbow Effect', code: '#FFFFFF', image: '/white.png' },
-      { name: 'Spectrum Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Light Prism', code: '#F8F8FF', image: '/white.png' }
     ],
     features: [
       'Prismatic light effects',
@@ -1563,10 +1341,6 @@ export const productData: Product[] = [
     warranty: '3 years',
     price: '₹5,400',
     colors: [
-      { name: 'Magnetic Clear', code: '#F8F8FF', image: '/white.png' },
-      { name: 'Attachment White', code: '#FFFFFF', image: '/white.png' },
-      { name: 'System Blue', code: '#E6F3FF', image: '/blue.png' },
-      { name: 'Modular Gray', code: '#F5F5F5', image: '/white.png' }
     ],
     features: [
       'Magnetic attachment system',
@@ -1607,5 +1381,596 @@ export const productData: Product[] = [
       'Extended warranty',
       'Exclusive quality'
     ]
-  }
+  },
+    
+  {
+    id: 57,
+    name: 'Premium Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/MiddleAcrylic/blue.jpeg',
+    description: 'Top-tier acrylic piller with luxury finishes and features',
+    fullDescription: 'Our Premium Acrylic Piller represents the finest in acrylic craftsmanship, combining superior materials, advanced manufacturing techniques, and luxury finishes for discerning customers.',
+    rating: 4.9,
+    reviews: 67,
+    dimensions: '150cm x 10cm x 10cm',
+    weight: '5kg',
+    material: 'Premium acrylic with luxury treatments',
+    warranty: '5 years',
+    price: '₹7,500',
+    colors: [
+      { name: 'Premium Clear', code: '#15537b', image: '/MiddleAcrylic/blue.jpeg' },
+      { name: 'Luxury White', code: '#000000', image: '/MiddleAcrylic/black.jpeg' },
+      { name: 'Elite Blue', code: '#301934', image: '/MiddleAcrylic/dark-purple.jpeg' },
+      { name: 'Platinum Finish', code: '#ad5c24', image: '/MiddleAcrylic/dark-wood.jpeg' },
+      { name: 'Premium Clear', code: '#d57101', image: '/MiddleAcrylic/light-orange.jpeg' },
+      { name: 'Luxury White', code: '#ee8939', image: '/MiddleAcrylic/orange.jpeg' },
+      { name: 'Elite Blue', code: '#d6cab6', image: '/MiddleAcrylic/white.jpeg' },
+      { name: 'Platinum Finish', code: '#eece79', image: '/MiddleAcrylic/yellow.jpeg' }
+    ],
+    features: [
+      'Premium materials',
+      'Luxury finishes',
+      'Superior clarity',
+      'Extended warranty',
+      'Exclusive quality'
+    ]},
+  {
+    id: 81,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-1.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [
+    ],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 58,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-2.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 59,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-3.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 60,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-4.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 61,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-5.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 62,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-6.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 63,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-7.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 64,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-8.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 65,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-9.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 66,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-10.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 67,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-11.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 68,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-12.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 69,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-13.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 70,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-14.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 71,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallAcrylic/Untitled-15.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 72,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-2.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 73,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-3.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 74,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-4.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 75,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-5.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 76,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-6.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 77,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-7.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 78,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-8.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 79,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-9.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  ,
+  {
+    id: 80,
+    name: 'Magnetic Acrylic Piller',
+    category: 'SmallPillers',
+    baseImage: '/SmallWood/SmallWood-1.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+
+
+
+
+  
 ];

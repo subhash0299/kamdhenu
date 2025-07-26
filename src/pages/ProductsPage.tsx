@@ -14,7 +14,7 @@ const ProductsPage = () => {
     price: product.price
   }));
 
-  const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers'];
+  const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers','SmallPillers'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredProducts = activeCategory === 'All' 
