@@ -120,7 +120,7 @@ const AboutPage = () => {
             />
             {/* CEO About Text */}
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-slate-800 mb-3">Mr. Bhanwar Lal Dara</h3>
+              <h3 className="text-3xl font-bold text-slate-800 mb-3">Mr. Bhanwar Lal Bishnoi</h3>
               <div className="text-lg bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent font-bold mb-6">Founder & CEO</div>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 Mr. Bhanwar Lal Dara founded Kamdhenu Steel with a vision to redefine steel furniture in India.
