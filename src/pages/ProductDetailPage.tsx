@@ -131,6 +131,7 @@ const ProductDetailPage = () => {
               </div>
 
               {/* Specifications */}
+{/*
               <div className="bg-slate-50 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Specifications</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -152,7 +153,7 @@ const ProductDetailPage = () => {
                   </div>
                 </div>
               </div>
-
+*/}
               {/* Features */}
               <div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">Key Features</h3>

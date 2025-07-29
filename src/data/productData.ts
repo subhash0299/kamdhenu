@@ -26,7 +26,7 @@ export const productData: Product[] = [
   // Steel Pillers (1-20)
   {
     id: 1,
-    name: 'Classic Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-1.jpeg',
     description: 'Premium steel construction with elegant finish for modern interiors',
@@ -50,7 +50,7 @@ export const productData: Product[] = [
   },
   {
     id: 2,
-    name: 'Royal Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-2.jpeg',
     description: 'Luxury steel piller with ornate design for premium applications',
@@ -74,7 +74,7 @@ export const productData: Product[] = [
   },
   {
     id: 3,
-    name: 'Modern Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-3.jpeg',
     description: 'Sleek contemporary design perfect for minimalist interiors',
@@ -98,7 +98,7 @@ export const productData: Product[] = [
   },
   {
     id: 4,
-    name: 'Industrial Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-4.jpeg',
     description: 'Heavy-duty steel piller for industrial and commercial use',
@@ -122,7 +122,7 @@ export const productData: Product[] = [
   },
   {
     id: 5,
-    name: 'Decorative Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-5.jpeg',
     description: 'Artistic steel piller with decorative patterns and finishes',
@@ -146,7 +146,7 @@ export const productData: Product[] = [
   },
   {
     id: 6,
-    name: 'Slim Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-6.jpeg',
     description: 'Space-saving slim profile steel piller for compact areas',
@@ -170,7 +170,7 @@ export const productData: Product[] = [
   },
   {
     id: 7,
-    name: 'Heavy Duty Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-7.jpeg',
     description: 'Maximum strength steel piller for heavy load applications',
@@ -194,7 +194,7 @@ export const productData: Product[] = [
   },
   {
     id: 8,
-    name: 'Elegant Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-8.jpeg',
     description: 'Sophisticated steel piller with refined finishing touches',
@@ -218,7 +218,7 @@ export const productData: Product[] = [
   },
   {
     id: 9,
-    name: 'Textured Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-9.jpeg',
     description: 'Steel piller with unique textured surface for visual interest',
@@ -242,7 +242,7 @@ export const productData: Product[] = [
   },
   {
     id: 10,
-    name: 'Premium Steel Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/BigAcrylic/BigAcrylic-10.jpeg',
     description: 'Top-tier steel piller with luxury finishes and superior quality',
@@ -266,7 +266,7 @@ export const productData: Product[] = [
   },
   {
     id: 11,
-    name: 'Compact Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-1.jpeg',
     description: 'Small-scale steel piller perfect for residential applications',
@@ -290,7 +290,7 @@ export const productData: Product[] = [
   },
   {
     id: 12,
-    name: 'Architectural Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-2.jpeg',
     description: 'Architecturally designed steel piller for statement installations',
@@ -314,7 +314,7 @@ export const productData: Product[] = [
   },
   {
     id: 13,
-    name: 'Weather Resistant Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-3.jpeg',
     description: 'Outdoor-rated steel piller with superior weather protection',
@@ -338,7 +338,7 @@ export const productData: Product[] = [
   },
   {
     id: 14,
-    name: 'Custom Steel Piller',
+    name: 'Wooden Steel Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-4.jpeg',
     description: 'Fully customizable steel piller made to your specifications',
@@ -362,7 +362,7 @@ export const productData: Product[] = [
   },
   {
     id: 15,
-    name: 'Reinforced Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-5.jpeg',
     description: 'Extra-strong steel piller with reinforced construction',
@@ -386,7 +386,7 @@ export const productData: Product[] = [
   },
   {
     id: 16,
-    name: 'Polished Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-6.jpeg',
     description: 'Mirror-finish steel piller with high-gloss polished surface',
@@ -410,7 +410,7 @@ export const productData: Product[] = [
   },
   {
     id: 17,
-    name: 'Matte Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-7.jpeg',
     description: 'Contemporary matte finish steel piller for modern aesthetics',
@@ -434,7 +434,7 @@ export const productData: Product[] = [
   },
   {
     id: 18,
-    name: 'Vintage Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-8.jpeg',
     description: 'Antique-style steel piller with vintage finishing touches',
@@ -458,7 +458,7 @@ export const productData: Product[] = [
   },
   {
     id: 19,
-    name: 'Spiral Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-9.jpeg',
     description: 'Unique spiral-designed steel piller for artistic installations',
@@ -482,7 +482,7 @@ export const productData: Product[] = [
   },
   {
     id: 20,
-    name: 'Fluted Steel Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/BlackWood/BlackWood-10.jpeg',
     description: 'Classical fluted design steel piller with elegant vertical grooves',
@@ -508,7 +508,7 @@ export const productData: Product[] = [
   // Wooden Pillers (21-35)
   {
     id: 21,
-    name: 'Classic Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-1.jpeg',
     description: 'Traditional wooden piller with natural wood grain and finish',
@@ -532,7 +532,7 @@ export const productData: Product[] = [
   },
   {
     id: 22,
-    name: 'Carved Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-2.jpeg',
     description: 'Intricately carved wooden piller with traditional motifs',
@@ -556,7 +556,7 @@ export const productData: Product[] = [
   },
   {
     id: 23,
-    name: 'Modern Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-3.jpeg',
     description: 'Contemporary wooden piller with clean lines and modern finish',
@@ -580,7 +580,7 @@ export const productData: Product[] = [
   },
   {
     id: 24,
-    name: 'Rustic Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-4.jpeg',
     description: 'Weathered wooden piller with rustic charm and character',
@@ -604,7 +604,7 @@ export const productData: Product[] = [
   },
   {
     id: 25,
-    name: 'Polished Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-5.jpeg',
     description: 'High-gloss polished wooden piller with luxury finish',
@@ -628,7 +628,7 @@ export const productData: Product[] = [
   },
   {
     id: 26,
-    name: 'Bamboo Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-6.jpeg',
     description: 'Eco-friendly bamboo piller with sustainable natural beauty',
@@ -652,7 +652,7 @@ export const productData: Product[] = [
   },
   {
     id: 27,
-    name: 'Stained Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-7.jpeg',
     description: 'Beautifully stained wooden piller with rich color variations',
@@ -676,7 +676,7 @@ export const productData: Product[] = [
   },
   {
     id: 28,
-    name: 'Turned Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-8.jpeg',
     description: 'Lathe-turned wooden piller with elegant curved profiles',
@@ -700,7 +700,7 @@ export const productData: Product[] = [
   },
   {
     id: 29,
-    name: 'Reclaimed Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-9.jpeg',
     description: 'Environmentally conscious piller made from reclaimed wood',
@@ -724,7 +724,7 @@ export const productData: Product[] = [
   },
   {
     id: 30,
-    name: 'Painted Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-10.jpeg',
     description: 'Wooden piller with premium paint finish in various colors',
@@ -748,7 +748,7 @@ export const productData: Product[] = [
   },
   {
     id: 31,
-    name: 'Composite Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-11.jpeg',
     description: 'Advanced composite wooden piller with enhanced durability',
@@ -772,7 +772,7 @@ export const productData: Product[] = [
   },
   {
     id: 32,
-    name: 'Exotic Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-12.jpeg',
     description: 'Rare exotic wood piller with unique grain patterns',
@@ -796,7 +796,7 @@ export const productData: Product[] = [
   },
   {
     id: 33,
-    name: 'Laminated Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-13.jpeg',
     description: 'Engineered laminated wooden piller with superior strength',
@@ -820,7 +820,7 @@ export const productData: Product[] = [
   },
   {
     id: 34,
-    name: 'Textured Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-14.jpeg',
     description: 'Wooden piller with unique textured surface treatments',
@@ -844,7 +844,7 @@ export const productData: Product[] = [
   },
   {
     id: 35,
-    name: 'Premium Wooden Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-15.jpeg',
     description: 'Top-quality wooden piller with luxury finishes and materials',
@@ -870,7 +870,7 @@ export const productData: Product[] = [
   // Acrylic Pillers (36-50)
   {
     id: 36,
-    name: 'Clear Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-16.jpeg',
     description: 'Crystal clear acrylic piller with transparent modern appeal',
@@ -894,7 +894,7 @@ export const productData: Product[] = [
   },
   {
     id: 37,
-    name: 'Frosted Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-17.jpeg',
     description: 'Elegant frosted acrylic piller with subtle translucent finish',
@@ -918,7 +918,7 @@ export const productData: Product[] = [
   },
   {
     id: 38,
-    name: 'Colored Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-18.jpeg',
     description: 'Vibrant colored acrylic piller available in multiple hues',
@@ -942,7 +942,7 @@ export const productData: Product[] = [
   },
   {
     id: 39,
-    name: 'Textured Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-19.jpeg',
     description: 'Acrylic piller with unique textured surface patterns',
@@ -966,7 +966,7 @@ export const productData: Product[] = [
   },
   {
     id: 40,
-    name: 'LED Compatible Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-20.jpeg',
     description: 'Acrylic piller designed for LED lighting integration',
@@ -990,7 +990,7 @@ export const productData: Product[] = [
   },
   {
     id: 41,
-    name: 'Gradient Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-21.jpeg',
     description: 'Acrylic piller with beautiful gradient color transitions',
@@ -1014,7 +1014,7 @@ export const productData: Product[] = [
   },
   {
     id: 42,
-    name: 'Mirror Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-22.jpeg',
     description: 'Reflective mirror acrylic piller for space enhancement',
@@ -1038,7 +1038,7 @@ export const productData: Product[] = [
   },
   {
     id: 43,
-    name: 'Etched Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-23.jpeg',
     description: 'Artistically etched acrylic piller with decorative patterns',
@@ -1062,7 +1062,7 @@ export const productData: Product[] = [
   },
   {
     id: 44,
-    name: 'Thick Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-24.jpeg',
     description: 'Heavy-duty thick acrylic piller for maximum strength',
@@ -1086,7 +1086,7 @@ export const productData: Product[] = [
   },
   {
     id: 45,
-    name: 'Flexible Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-25.jpeg',
     description: 'Bendable acrylic piller for curved and creative installations',
@@ -1110,7 +1110,7 @@ export const productData: Product[] = [
   },
   {
     id: 46,
-    name: 'Anti-Static Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-26.jpeg',
     description: 'Specialized acrylic piller with anti-static properties',
@@ -1134,7 +1134,7 @@ export const productData: Product[] = [
   },
   {
     id: 47,
-    name: 'UV Resistant Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-27.jpeg',
     description: 'Outdoor-rated acrylic piller with superior UV protection',
@@ -1158,7 +1158,7 @@ export const productData: Product[] = [
   },
   {
     id: 48,
-    name: 'Prismatic Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-28.jpeg',
     description: 'Light-refracting acrylic piller with prismatic effects',
@@ -1182,7 +1182,7 @@ export const productData: Product[] = [
   },
   {
     id: 49,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-29.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1206,7 +1206,7 @@ export const productData: Product[] = [
   },
   {
     id: 50,
-    name: 'Premium Acrylic Piller',
+    name: 'Wooden Master Piller',
     category: 'Wooden Pillers',
     baseImage: '/wooden/wood-30.jpeg',
     description: 'Top-tier acrylic piller with luxury finishes and features',
@@ -1231,7 +1231,7 @@ export const productData: Product[] = [
   ,
   {
     id: 51,
-    name: 'Prismatic Acrylic Piller',
+    name: 'SS Master Piller',
     category: 'Steel Pillers',
     baseImage: '/Steel/Steel-1.jpeg',
     description: 'Light-refracting acrylic piller with prismatic effects',
@@ -1255,7 +1255,7 @@ export const productData: Product[] = [
   },
   {
     id: 52,
-    name: 'Magnetic Acrylic Piller',
+    name: 'SS Master Piller',
     category: 'Steel Pillers',
     baseImage: '/Steel/Steel-2.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1279,7 +1279,7 @@ export const productData: Product[] = [
   },
   {
     id: 53,
-    name: 'Premium Acrylic Piller',
+    name: 'SS Master Piller',
     category: 'Steel Pillers',
     baseImage: '/Steel/Steel-3.jpeg',
     description: 'Top-tier acrylic piller with luxury finishes and features',
@@ -1304,7 +1304,7 @@ export const productData: Product[] = [
   ,
   {
     id: 54,
-    name: 'Prismatic Acrylic Piller',
+    name: 'SS Master Piller',
     category: 'Steel Pillers',
     baseImage: '/Steel/Steel-4.jpeg',
     description: 'Light-refracting acrylic piller with prismatic effects',
@@ -1328,7 +1328,7 @@ export const productData: Product[] = [
   },
   {
     id: 55,
-    name: 'Magnetic Acrylic Piller',
+    name: 'SS Master Piller',
     category: 'Steel Pillers',
     baseImage: '/Steel/Steel-5.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1352,7 +1352,7 @@ export const productData: Product[] = [
   },
   {
     id: 56,
-    name: 'Premium Acrylic Piller',
+    name: 'Acrylic Master Piller',
     category: 'Acrylic Pillers',
     baseImage: '/SmallAcrylic/blue.jpeg',
     description: 'Top-tier acrylic piller with luxury finishes and features',
@@ -1365,14 +1365,6 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹7,500',
     colors: [
-      { name: 'Premium Clear', code: '#15537b', image: '/SmallAcrylic/blue.jpeg' },
-      { name: 'Luxury White', code: '#9b3d17', image: '/SmallAcrylic/brown.jpeg' },
-      { name: 'Elite Blue', code: '#56392c', image: '/SmallAcrylic/dark-wood.jpeg' },
-      { name: 'Platinum Finish', code: '#156e18', image: '/SmallAcrylic/green.jpeg' },
-      { name: 'Premium Clear', code: '#d98f0e', image: '/SmallAcrylic/orange.jpeg' },
-      { name: 'Luxury White', code: '#c01739', image: '/SmallAcrylic/pink.jpeg' },
-      { name: 'Elite Blue', code: '#d6cab6', image: '/SmallAcrylic/white.jpeg' },
-      { name: 'Platinum Finish', code: '#d9bd77', image: '/SmallAcrylic/yellow.jpeg' }
     ],
     features: [
       'Premium materials',
@@ -1382,10 +1374,172 @@ export const productData: Product[] = [
       'Exclusive quality'
     ]
   },
+  {
+    id: 89,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/brown.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 90,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/dark-wood.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 91,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage:'/SmallAcrylic/green.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 92,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/orange.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 93,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/pink.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 94,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/white.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+  {
+    id: 95,
+    name: 'Acrylic Master Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/SmallAcrylic/yellow.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+
     
   {
     id: 57,
-    name: 'Premium Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/MiddleAcrylic/blue.jpeg',
     description: 'Top-tier acrylic piller with luxury finishes and features',
@@ -1398,14 +1552,7 @@ export const productData: Product[] = [
     warranty: '5 years',
     price: '₹7,500',
     colors: [
-      { name: 'Premium Clear', code: '#15537b', image: '/MiddleAcrylic/blue.jpeg' },
-      { name: 'Luxury White', code: '#000000', image: '/MiddleAcrylic/black.jpeg' },
-      { name: 'Elite Blue', code: '#301934', image: '/MiddleAcrylic/dark-purple.jpeg' },
-      { name: 'Platinum Finish', code: '#ad5c24', image: '/MiddleAcrylic/dark-wood.jpeg' },
-      { name: 'Premium Clear', code: '#d57101', image: '/MiddleAcrylic/light-orange.jpeg' },
-      { name: 'Luxury White', code: '#ee8939', image: '/MiddleAcrylic/orange.jpeg' },
-      { name: 'Elite Blue', code: '#d6cab6', image: '/MiddleAcrylic/white.jpeg' },
-      { name: 'Platinum Finish', code: '#eece79', image: '/MiddleAcrylic/yellow.jpeg' }
+
     ],
     features: [
       'Premium materials',
@@ -1413,10 +1560,174 @@ export const productData: Product[] = [
       'Superior clarity',
       'Extended warranty',
       'Exclusive quality'
-    ]},
+    ]
+  },
+      {
+    id: 82,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/black.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 83,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/dark-purple.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 84,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/dark-wood.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 85,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/light-orange.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 86,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/orange.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 87,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/white.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+    {
+    id: 88,
+    name: 'Acrylic Piller',
+    category: 'Acrylic Pillers',
+    baseImage: '/MiddleAcrylic/yellow.jpeg',
+    description: 'Innovative acrylic piller with magnetic attachment system',
+    fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
+    rating: 4.5,
+    reviews: 56,
+    dimensions: '115cm x 8cm x 8cm',
+    weight: '4kg',
+    material: 'Acrylic with embedded magnetic system',
+    warranty: '3 years',
+    price: '₹5,400',
+    colors: [],
+    features: [
+      'Magnetic attachment system',
+      'Accessory compatibility',
+      'No drilling required',
+      'Modular design',
+      'Easy customization'
+    ]
+  },
+
+
   {
     id: 81,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Wooden Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-1.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1440,7 +1751,7 @@ export const productData: Product[] = [
   },
   {
     id: 58,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Wooden Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-2.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1463,7 +1774,7 @@ export const productData: Product[] = [
   },
   {
     id: 59,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-3.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1486,7 +1797,7 @@ export const productData: Product[] = [
   },
   {
     id: 60,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-4.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1509,7 +1820,7 @@ export const productData: Product[] = [
   },
   {
     id: 61,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-5.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1532,7 +1843,7 @@ export const productData: Product[] = [
   },
   {
     id: 62,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-6.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1555,7 +1866,7 @@ export const productData: Product[] = [
   },
   {
     id: 63,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-7.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1578,7 +1889,7 @@ export const productData: Product[] = [
   },
   {
     id: 64,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-8.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1601,7 +1912,7 @@ export const productData: Product[] = [
   },
   {
     id: 65,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-9.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1624,7 +1935,7 @@ export const productData: Product[] = [
   },
   {
     id: 66,
-    name: 'Magnetic Acrylic Piller',
+    name: 'Acrylic Piller',
     category: 'SmallPillers',
     baseImage: '/SmallAcrylic/Untitled-10.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
@@ -1647,8 +1958,8 @@ export const productData: Product[] = [
   },
   {
     id: 67,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Steel Piller',
+    category: 'Steel Pillers',
     baseImage: '/SmallAcrylic/Untitled-11.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1670,8 +1981,8 @@ export const productData: Product[] = [
   },
   {
     id: 68,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Steel Piller',
+    category: 'Steel Pillers',
     baseImage: '/SmallAcrylic/Untitled-12.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1693,8 +2004,8 @@ export const productData: Product[] = [
   },
   {
     id: 69,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Steel Piller',
+    category: 'Steel Pillers',
     baseImage: '/SmallAcrylic/Untitled-13.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1716,8 +2027,8 @@ export const productData: Product[] = [
   },
   {
     id: 70,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Steel Piller',
+    category: 'Steel Pillers',
     baseImage: '/SmallAcrylic/Untitled-14.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1739,8 +2050,8 @@ export const productData: Product[] = [
   },
   {
     id: 71,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Steel Piller',
+    category: 'Steel Pillers',
     baseImage: '/SmallAcrylic/Untitled-15.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1762,8 +2073,8 @@ export const productData: Product[] = [
   },
   {
     id: 72,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-2.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1785,8 +2096,8 @@ export const productData: Product[] = [
   },
   {
     id: 73,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-3.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1808,8 +2119,8 @@ export const productData: Product[] = [
   },
   {
     id: 74,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-4.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1831,8 +2142,8 @@ export const productData: Product[] = [
   },
   {
     id: 75,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-5.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1854,8 +2165,8 @@ export const productData: Product[] = [
   },
   {
     id: 76,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-6.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1877,8 +2188,8 @@ export const productData: Product[] = [
   },
   {
     id: 77,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-7.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1900,8 +2211,8 @@ export const productData: Product[] = [
   },
   {
     id: 78,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-8.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1923,8 +2234,8 @@ export const productData: Product[] = [
   },
   {
     id: 79,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-9.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',
@@ -1947,8 +2258,8 @@ export const productData: Product[] = [
   ,
   {
     id: 80,
-    name: 'Magnetic Acrylic Piller',
-    category: 'SmallPillers',
+    name: 'Wooden Piller',
+    category: 'Wooden Pillers',
     baseImage: '/SmallWood/SmallWood-1.jpeg',
     description: 'Innovative acrylic piller with magnetic attachment system',
     fullDescription: 'Featuring an integrated magnetic system, this acrylic piller allows for easy attachment of accessories and decorative elements without drilling or permanent modifications.',

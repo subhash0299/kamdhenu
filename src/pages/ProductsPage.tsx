@@ -89,7 +89,7 @@ const ProductsPage = () => {
                     <span className="text-xs sm:text-sm font-semibold text-orange-600 bg-gradient-to-r from-orange-50 to-orange-100 px-3 py-1 rounded-full shadow-sm">
                       {product.category}
                     </span>
-                    <div className="text-sm font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">{product.price}</div>
+                    {/*<div className="text-sm font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">{product.price}</div> */}
                   </div>
                   
                   <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">{product.name}</h3>
