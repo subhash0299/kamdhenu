@@ -68,25 +68,20 @@ const ProductsPage = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6 shadow-lg">
-            Premium Collection
-          </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Our Complete
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Product Range
+            Our Products
+            <span className="block bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mt-2">
+              Pillers & Pickots
             </span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive collection of premium pillers and decorative pickots - each piece crafted to perfection
-          </p>
+
         </div>
       </section>
 
       {/* Section Toggle */}
-      <section className="py-12 bg-white">
+      <section className="py-5 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-0"> {/* changed from mb-8 to mb-2 */}
             <div className="bg-slate-100 p-2 rounded-2xl shadow-lg">
               <div className="flex space-x-2">
                 <button
@@ -118,23 +113,8 @@ const ProductsPage = () => {
       {activeSection === 'pillers' && (
       <section className="py-12 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              Premium Pillers
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Luxury
-              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
-                Pillers Collection
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Premium pillers in steel, wood, and acrylic materials for residential and commercial applications
-            </p>
-          </div>
-
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-16 px-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-4 -mt-5 px-4"> {/* changed mb-16 to mb-4 and added -mt-4 */}
             {categories.map((category) => (
               <button
                 key={category}
@@ -198,20 +178,7 @@ const ProductsPage = () => {
       {activeSection === 'pickots' && (
       <section className="py-12 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              Decorative Pickots
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Artistic
-              <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Pickots Collection
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Intricate decorative pickots with beautiful patterns and designs for enhanced aesthetic appeal
-            </p>
-          </div>
+
 
           {/* Pickots Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
