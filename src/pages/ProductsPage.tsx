@@ -14,7 +14,43 @@ const ProductsPage = () => {
     price: product.price
   }));
 
-  const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers','SmallPillers'];
+  // Pickot images from pickot1 folder
+  const pickotImages = [
+    '/pickot1/Untitled-1.jpeg', '/pickot1/Untitled-2.jpeg', '/pickot1/Untitled-3.jpeg', '/pickot1/Untitled-4.jpeg',
+    '/pickot1/Untitled-5.jpeg', '/pickot1/Untitled-6.jpeg', '/pickot1/Untitled-7.jpeg', '/pickot1/Untitled-8.jpeg',
+    '/pickot1/Untitled-9.jpeg', '/pickot1/Untitled-10.jpeg', '/pickot1/Untitled-11.jpeg', '/pickot1/Untitled-12.jpeg',
+    '/pickot1/Untitled-13.jpeg', '/pickot1/Untitled-14.jpeg', '/pickot1/Untitled-15.jpeg', '/pickot1/Untitled-16.jpeg',
+    '/pickot1/Untitled-17.jpeg', '/pickot1/Untitled-18.jpeg',
+    '/pickot1/p1 (1).jpeg', '/pickot1/p1 (2).jpeg', '/pickot1/p1 (3).jpeg', '/pickot1/p1 (4).jpeg',
+    '/pickot1/p1 (5).jpeg', '/pickot1/p1 (6).jpeg', '/pickot1/p1 (7).jpeg', '/pickot1/p1 (8).jpeg',
+    '/pickot1/p1 (9).jpeg', '/pickot1/p1 (10).jpeg', '/pickot1/p1 (11).jpeg', '/pickot1/p1 (12).jpeg',
+    '/pickot1/p1 (13).jpeg', '/pickot1/p1 (14).jpeg', '/pickot1/p1 (15).jpeg', '/pickot1/p1 (16).jpeg',
+    '/pickot1/p1 (17).jpeg', '/pickot1/p1 (18).jpeg', '/pickot1/p1 (19).jpeg', '/pickot1/p1 (20).jpeg',
+    '/pickot1/p1 (21).jpeg', '/pickot1/p1 (22).jpeg', '/pickot1/p1 (23).jpeg', '/pickot1/p1 (24).jpeg',
+    '/pickot1/p1 (25).jpeg', '/pickot1/p1 (26).jpeg', '/pickot1/p1 (27).jpeg', '/pickot1/p1 (28).jpeg',
+    '/pickot1/p1 (29).jpeg'
+  ];
+
+  const pickotNames = [
+    'Classic Pickot Design', 'Modern Pickot Style', 'Elegant Pickot Pattern', 'Traditional Pickot',
+    'Contemporary Pickot', 'Decorative Pickot', 'Premium Pickot Design', 'Luxury Pickot Style',
+    'Artistic Pickot Pattern', 'Designer Pickot', 'Custom Pickot Design', 'Handcrafted Pickot',
+    'Ornamental Pickot', 'Stylish Pickot', 'Refined Pickot Design', 'Sophisticated Pickot',
+    'Unique Pickot Pattern', 'Exclusive Pickot Style'
+  ];
+
+  // Generate pickot products
+  const pickotProducts = pickotImages.map((image, index) => ({
+    id: 1000 + index,
+    name: pickotNames[index % pickotNames.length] + ` ${Math.floor(index / pickotNames.length) + 1}`,
+    category: 'Pickots',
+    image: image,
+    description: 'Premium quality pickot with intricate design patterns for decorative applications',
+    rating: (4.3 + Math.random() * 0.7).toFixed(1),
+    price: `₹${(1500 + Math.floor(Math.random() * 2000)).toLocaleString()}`
+  }));
+
+  const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers', 'SmallPillers'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredProducts = activeCategory === 'All' 
@@ -35,20 +71,35 @@ const ProductsPage = () => {
             Premium Collection
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            Luxury
+            Our Complete
             <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Pillers Collection
+              Product Range
             </span>
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium pillers in steel, wood, and acrylic - each piece crafted to perfection
+            Discover our comprehensive collection of premium pillers and decorative pickots - each piece crafted to perfection
           </p>
         </div>
       </section>
 
-      {/* Products Section */}
+      {/* Pillers Section */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Premium Pillers
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
+              Luxury
+              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                Pillers Collection
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Premium pillers in steel, wood, and acrylic materials for residential and commercial applications
+            </p>
+          </div>
+
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-16 px-4">
             {categories.map((category) => (
@@ -89,7 +140,6 @@ const ProductsPage = () => {
                     <span className="text-xs sm:text-sm font-semibold text-orange-600 bg-gradient-to-r from-orange-50 to-orange-100 px-3 py-1 rounded-full shadow-sm">
                       {product.category}
                     </span>
-                    {/*<div className="text-sm font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">{product.price}</div> */}
                   </div>
                   
                   <h3 className="text-base sm:text-lg font-bold text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">{product.name}</h3>
@@ -107,9 +157,76 @@ const ProductsPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Call to Action */}
-          <div className="text-center mt-20">
+      {/* Pickots Section */}
+      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Decorative Pickots
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
+              Artistic
+              <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                Pickots Collection
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Intricate decorative pickots with beautiful patterns and designs for enhanced aesthetic appeal
+            </p>
+          </div>
+
+          {/* Pickots Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6">
+            {pickotProducts.map((pickot) => (
+              <div
+                key={pickot.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:-translate-y-2 border border-slate-100"
+              >
+                <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-white p-4">
+                  <img
+                    src={pickot.image}
+                    alt={pickot.name}
+                    className="w-full h-32 sm:h-40 object-contain transition-transform duration-700 group-hover:scale-110"
+                  />
+                  
+                  {/* Gradient Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+                
+                <div className="p-4">
+                  <div className="flex items-center justify-center mb-2">
+                    <span className="text-xs font-semibold text-blue-600 bg-gradient-to-r from-blue-50 to-blue-100 px-2 py-1 rounded-full shadow-sm">
+                      {pickot.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-sm font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors text-center line-clamp-2">{pickot.name}</h3>
+                  
+                  <div className="flex justify-center">
+                    <button
+                      onClick={() => {
+                        const message = encodeURIComponent(`Hi! I'm interested in the ${pickot.name}. Can you provide more information?`);
+                        window.open(`https://wa.me/919916082929?text=${message}`, '_blank');
+                      }}
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      Inquire Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <div className="bg-gradient-to-br from-slate-900 to-black rounded-3xl p-12 shadow-2xl relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-10">
@@ -120,17 +237,17 @@ const ProductsPage = () => {
                 <span className="inline-block px-4 py-2 bg-orange-600/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6">
                   Custom Solutions
                 </span>
-                <h3 className="text-3xl font-bold text-white mb-4">Need Custom Pillers?</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Need Custom Products?</h3>
                 <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                We specialize in creating custom pillers in steel, wood, and acrylic materials tailored to your exact specifications. 
-                From residential to commercial projects, we bring your vision to life.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
-              >
-                Get Custom Quote
-              </Link>
+                  We specialize in creating custom pillers and pickots tailored to your exact specifications. 
+                  From residential to commercial projects, we bring your vision to life.
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
+                >
+                  Get Custom Quote
+                </Link>
               </div>
             </div>
           </div>
