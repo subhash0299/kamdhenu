@@ -52,6 +52,7 @@ const ProductsPage = () => {
 
   const categories = ['All', 'Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers', 'SmallPillers'];
   const [activeCategory, setActiveCategory] = React.useState('All');
+  const [activeSection, setActiveSection] = React.useState('pillers'); // New state for section toggle
 
   const filteredProducts = activeCategory === 'All' 
     ? products 
@@ -82,8 +83,40 @@ const ProductsPage = () => {
         </div>
       </section>
 
+      {/* Section Toggle */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center mb-8">
+            <div className="bg-slate-100 p-2 rounded-2xl shadow-lg">
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setActiveSection('pillers')}
+                  className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
+                    activeSection === 'pillers'
+                      ? 'bg-gradient-to-r from-orange-600 to-orange-700 text-white shadow-lg transform scale-105'
+                      : 'text-slate-600 hover:text-orange-600 hover:bg-white/50'
+                  }`}
+                >
+                  Pillers
+                </button>
+                <button
+                  onClick={() => setActiveSection('pickots')}
+                  className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
+                    activeSection === 'pickots'
+                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg transform scale-105'
+                      : 'text-slate-600 hover:text-blue-600 hover:bg-white/50'
+                  }`}
+                >
+                  Pickots
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Pillers Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
+      {activeSection === 'pillers' && (
+      <section className="py-12 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
@@ -159,9 +192,11 @@ const ProductsPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Pickots Section */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+      {activeSection === 'pickots' && (
+      <section className="py-12 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="inline-block px-6 py-3 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
@@ -222,6 +257,7 @@ const ProductsPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-50">
@@ -239,7 +275,7 @@ const ProductsPage = () => {
                 </span>
                 <h3 className="text-3xl font-bold text-white mb-4">Need Custom Products?</h3>
                 <p className="text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  We specialize in creating custom pillers and pickots tailored to your exact specifications. 
+                  We specialize in creating custom {activeSection} tailored to your exact specifications. 
                   From residential to commercial projects, we bring your vision to life.
                 </p>
                 <Link
