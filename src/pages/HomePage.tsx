@@ -207,11 +207,7 @@ const HomePage = () => {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center text-center px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-6">
-              <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 backdrop-blur-sm border border-orange-400/30 rounded-full text-orange-300 text-sm font-medium mb-4 shadow-lg">
-                ✨ Premium Steel Furniture Specialists
-              </span>
-            </div>
+
             
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-tight">
               <span className="block bg-gradient-to-r from-white via-orange-100 to-white bg-clip-text text-transparent">
@@ -267,53 +263,7 @@ const HomePage = () => {
       </section>
 
       {/* Premium Features Section */}
-      <section className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-20">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              Why Choose Excellence
-            </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
-              Crafted for the
-              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
-                Extraordinary
-              </span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Every piece tells a story of uncompromising quality, innovative design, and masterful execution
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {luxuryFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="group relative">
-                  <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:-translate-y-2 overflow-hidden">
-                    {/* Gradient Background on Hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      
-                      <div className="text-center mb-4">
-                        <div className="text-3xl font-bold text-orange-600 mb-1">{feature.metric}</div>
-                        <h3 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h3>
-                      </div>
-                      
-                      <p className="text-slate-600 leading-relaxed text-center">{feature.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Featured Products Section */}
       <section className="py-32 bg-slate-900 relative overflow-hidden">
@@ -324,14 +274,9 @@ const HomePage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              Signature Collection
-            </span>
+
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Masterpiece
-              <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                Creations
-              </span>
+              Our Products
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Discover our most coveted designs, each piece a testament to exceptional craftsmanship
@@ -398,54 +343,55 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Luxury CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-slate-800 via-slate-900 to-black relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl animate-pulse" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <div className="max-w-4xl mx-auto">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600/20 to-orange-700/20 border border-orange-400/30 text-orange-300 rounded-full text-sm font-semibold mb-8 shadow-lg">
-              Ready to Begin Your Journey?
+      <section className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Why Choose Excellence
             </span>
-            
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Transform Your Space with
-              <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                Luxury Steel Furniture
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+              Crafted for the
+              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                Extraordinary
               </span>
             </h2>
-            
-            <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Experience the pinnacle of craftsmanship. Let us create something extraordinary for your space.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Every piece tells a story of uncompromising quality, innovative design, and masterful execution
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
-                className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
-              >
-                <span className="relative z-10 flex items-center justify-center space-x-2">
-                  <span>Get Exclusive Quote</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              </Link>
-              
-              <Link
-                to="/gallery"
-                className="group bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <span>View Our Process</span>
-                <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </Link>
-            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {luxuryFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="group relative">
+                  <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:-translate-y-2 overflow-hidden">
+                    {/* Gradient Background on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      
+                      <div className="text-center mb-4">
+                        <div className="text-3xl font-bold text-orange-600 mb-1">{feature.metric}</div>
+                        <h3 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h3>
+                      </div>
+                      
+                      <p className="text-slate-600 leading-relaxed text-center">{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
+
+      
     </div>
   );
 };
