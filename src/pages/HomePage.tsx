@@ -239,11 +239,11 @@ const HomePage = () => {
                 }}
                 className="group cursor-pointer flex flex-col items-center space-y-4 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300">
+                <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300 p-2">
                   <img 
                     src="/Steel/Steel-1.jpeg" 
                     alt="Pillers" 
-                    className="w-12 h-12 object-contain filter brightness-0 invert"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
                 <div className="text-center">
@@ -264,11 +264,11 @@ const HomePage = () => {
                 }}
                 className="group cursor-pointer flex flex-col items-center space-y-4 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-300">
+                <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-300 p-2">
                   <img 
                     src="/pickot1/Untitled-1.jpeg" 
                     alt="Pickots" 
-                    className="w-12 h-12 object-contain filter brightness-0 invert"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
                 <div className="text-center">
