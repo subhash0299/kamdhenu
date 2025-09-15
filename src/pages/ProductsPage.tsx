@@ -54,6 +54,19 @@ const ProductsPage = () => {
   const [activeCategory, setActiveCategory] = React.useState('All');
   const [activeSection, setActiveSection] = React.useState('pillers'); // New state for section toggle
 
+  // Listen for custom events from HomePage
+  React.useEffect(() => {
+    const handleSetSection = (event: CustomEvent) => {
+      setActiveSection(event.detail);
+    };
+
+    window.addEventListener('setProductSection', handleSetSection as EventListener);
+    
+    return () => {
+      window.removeEventListener('setProductSection', handleSetSection as EventListener);
+    };
+  }, []);
+
   const filteredProducts = activeCategory === 'All' 
     ? products 
     : products.filter(product => product.category === activeCategory);

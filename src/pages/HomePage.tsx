@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Award, Users, Clock, ArrowRight, Play, CheckCircle, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
@@ -225,25 +226,56 @@ const HomePage = () => {
               {slides[currentSlide].description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/products"
-                className="group relative overflow-hidden bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+              {/* Pillers Icon */}
+              <div 
+                onClick={() => {
+                  navigate('/products');
+                  // Small delay to ensure navigation completes before setting section
+                  setTimeout(() => {
+                    const event = new CustomEvent('setProductSection', { detail: 'pillers' });
+                    window.dispatchEvent(event);
+                  }, 100);
+                }}
+                className="group cursor-pointer flex flex-col items-center space-y-4 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               >
-                <span className="relative z-10 flex items-center justify-center space-x-2">
-                  <span>Explore Collection</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              </Link>
-              
-              <Link
-                to="/gallery"
-                className="group flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-orange-500/50 transition-all duration-300">
+                  <img 
+                    src="/Steel/Steel-1.jpeg" 
+                    alt="Pillers" 
+                    className="w-12 h-12 object-contain filter brightness-0 invert"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-1">Pillers</h3>
+                  <p className="text-white/80 text-sm">Steel, Wood & Acrylic</p>
+                </div>
+              </div>
+
+              {/* Pickots Icon */}
+              <div 
+                onClick={() => {
+                  navigate('/products');
+                  // Small delay to ensure navigation completes before setting section
+                  setTimeout(() => {
+                    const event = new CustomEvent('setProductSection', { detail: 'pickots' });
+                    window.dispatchEvent(event);
+                  }, 100);
+                }}
+                className="group cursor-pointer flex flex-col items-center space-y-4 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               >
-                <Play className="w-5 h-5" />
-                <span>Watch Process</span>
-              </Link>
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-300">
+                  <img 
+                    src="/pickot1/Untitled-1.jpeg" 
+                    alt="Pickots" 
+                    className="w-12 h-12 object-contain filter brightness-0 invert"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-1">Pickots</h3>
+                  <p className="text-white/80 text-sm">Decorative Designs</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
