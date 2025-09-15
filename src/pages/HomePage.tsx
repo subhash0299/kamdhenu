@@ -169,6 +169,8 @@ const HomePage = () => {
             </div>
           ))}
         </div>
+        
+
 
         {/* Floating Particles Animation */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -390,6 +392,25 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className="py-12 bg-white">
+  <div className="max-w-4xl mx-auto px-4">
+    <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center">
+      Browse Products
+    </h2>
+    <div className="flex flex-wrap justify-center gap-8">
+      {/* Category 1 */}
+      <div className="flex flex-col items-center bg-slate-50 rounded-2xl p-6 shadow">
+        <img src="/yourpath/glass-fitting.jpeg" alt="Pillers" className="w-32 h-32 object-contain mb-4" />
+        <span className="text-lg font-semibold text-slate-800 text-center">Pillers</span>
+      </div>
+      {/* Category 2 */}
+      <div className="flex flex-col items-center bg-slate-50 rounded-2xl p-6 shadow">
+        <img src="/yourpath/basecup.jpeg" alt="Pickots" className="w-32 h-32 object-contain mb-4" />
+        <span className="text-lg font-semibold text-slate-800 text-center">Pickots</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       
     </div>
