@@ -87,20 +87,20 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">Our Products</h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-3 sm:mb-4">Our Products</h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto px-4">
             Discover our range of premium steel furniture designed for durability and style
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-4">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-colors ${
+              className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium transition-colors touch-manipulation ${
                 activeCategory === category
                   ? 'bg-orange-600 text-white'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -112,36 +112,36 @@ const ProductsSection = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1"
             >
-              <div className="relative overflow-hidden bg-white p-4">
+              <div className="relative overflow-hidden bg-white p-3 sm:p-4">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-48 sm:h-56 lg:h-64 object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-32 sm:h-40 md:h-48 lg:h-56 object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute top-6 sm:top-8 right-6 sm:right-8 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 flex items-center space-x-1">
-                  <Star className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current" />
-                  <span className="text-xs sm:text-sm font-medium">{product.rating}</span>
+                <div className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center space-x-1">
+                  <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                  <span className="text-xs font-medium">{product.rating}</span>
                 </div>
               </div>
               
-              <div className="p-4 sm:p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs sm:text-sm font-medium text-orange-600 bg-orange-50 px-2 sm:px-3 py-1 rounded-full">
+              <div className="p-3 sm:p-4">
+                <div className="flex items-center justify-center mb-2 sm:mb-3">
+                  <span className="text-xs font-medium text-orange-600 bg-orange-50 px-2 py-1 rounded-full">
                     {product.category}
                   </span>
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">{product.name}</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 leading-relaxed">{product.description}</p>
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-800 mb-2 text-center line-clamp-2">{product.name}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 mb-3 sm:mb-4 leading-relaxed text-center line-clamp-2">{product.description}</p>
                 
                 <div className="flex justify-center">
-                  <button className="bg-slate-800 hover:bg-slate-900 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  <button className="w-full bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation">
                     View Details
                   </button>
                 </div>
@@ -151,10 +151,10 @@ const ProductsSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12 sm:mt-16">
-          <div className="bg-slate-50 rounded-2xl p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">Need Something Custom?</h3>
-            <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 max-w-2xl mx-auto px-4">
+        <div className="text-center mt-8 sm:mt-12">
+          <div className="bg-slate-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">Need Something Custom?</h3>
+            <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 max-w-2xl mx-auto px-2 sm:px-4">
               We specialize in creating bespoke steel furniture tailored to your exact needs. 
               From concept to completion, we bring your vision to life.
             </p>
@@ -165,7 +165,7 @@ const ProductsSection = () => {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation"
             >
               Get Custom Quote
             </button>

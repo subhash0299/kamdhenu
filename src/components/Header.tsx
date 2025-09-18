@@ -36,7 +36,7 @@ const Header = () => {
             <img
               src={isScrolled || !isHomePage ? "/blacklogo.png" : "/whitelogo.png"}
               alt="Kamdhenu Steel Logo"
-              className="h-10 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -49,8 +49,13 @@ const Header = () => {
             </div>
             <span className={`text-lg sm:text-xl font-bold transition-colors ${
               isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
-            }`}>
+            } hidden sm:inline`}>
               Kamdhenu Steel Furniture
+            </span>
+            <span className={`text-sm font-bold transition-colors sm:hidden ${
+              isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
+            }`}>
+              Kamdhenu Steel
             </span>
           </Link>
 
@@ -76,24 +81,24 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`md:hidden p-2 rounded-lg transition-colors touch-manipulation ${
               isScrolled || !isHomePage ? 'text-slate-700 hover:bg-slate-100' : 'text-white hover:bg-white/10'
             }`}
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg mb-4 shadow-lg">
-            <nav className="flex flex-col py-2">
+          <div className="md:hidden bg-white/98 backdrop-blur-sm rounded-lg mb-4 shadow-xl border border-slate-200">
+            <nav className="flex flex-col py-3">
               {navigationItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`font-medium hover:text-orange-600 hover:bg-orange-50 px-4 py-3 text-left transition-colors ${
+                  className={`font-medium hover:text-orange-600 hover:bg-orange-50 px-6 py-4 text-left transition-colors text-base touch-manipulation ${
                     location.pathname === item.path
                       ? 'text-orange-600 bg-orange-50'
                       : 'text-slate-700'
