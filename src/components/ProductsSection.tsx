@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
 
 const ProductsSection = () => {
+  const navigate = useNavigate();
+
   const products = [
     {
       id: 1,
@@ -159,12 +162,7 @@ const ProductsSection = () => {
               From concept to completion, we bring your vision to life.
             </p>
             <button 
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => navigate('/contact')}
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation"
             >
               Get Custom Quote

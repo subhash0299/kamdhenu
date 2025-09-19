@@ -5,7 +5,8 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Only scroll to top for specific routes if needed
+    // Removed automatic scroll to top behavior
   }, [pathname]);
 
   return null;

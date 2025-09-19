@@ -69,10 +69,8 @@ const HomePage = () => {
       category: categories[Math.floor(Math.random() * categories.length)],
       image: image,
       description: 'Premium quality piller with elegant finish for modern interiors and commercial spaces',
-      rating: (4.5 + Math.random() * 0.5).toFixed(1),
-      price: prices[Math.floor(Math.random() * prices.length)],
-      badge: badges[Math.floor(Math.random() * badges.length)]
-    }));
+    // Navigate to products page instead of scrolling
+    navigate('/products');
   };
 
   const luxuryFeatures = [
