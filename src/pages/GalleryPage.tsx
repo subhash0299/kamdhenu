@@ -2,6 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
 
 const GalleryPage = () => {
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const galleryItems = [
     {
       type: 'video',

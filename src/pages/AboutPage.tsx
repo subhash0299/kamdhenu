@@ -3,6 +3,11 @@ import { Award, Users, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const stats = [
     { icon: Award, label: 'Years Experience', value: '15+' },
     { icon: Users, label: 'Happy Customers', value: '500+' },

@@ -7,6 +7,11 @@ const ProductDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const product = productData.find(p => p.id === parseInt(id || '1'));
   const [selectedColor, setSelectedColor] = useState(0);
   const [selectedImage, setSelectedImage] = useState(

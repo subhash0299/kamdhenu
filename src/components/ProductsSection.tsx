@@ -144,9 +144,12 @@ const ProductsSection = () => {
                 <p className="text-xs sm:text-sm text-slate-600 mb-3 sm:mb-4 leading-relaxed text-center line-clamp-2">{product.description}</p>
                 
                 <div className="flex justify-center">
-                  <button className="w-full bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation">
+                  <Link
+                    to={`/products/${product.id}`}
+                    className="w-full bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation text-center block"
+                  >
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

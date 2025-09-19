@@ -2,6 +2,11 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactPage = () => {
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi! I'm interested in your steel furniture. Can you provide more information?");
     window.open(`https://wa.me/919916082929?text=${message}`, '_blank');

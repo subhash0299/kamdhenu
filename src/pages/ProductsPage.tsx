@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { productData } from '../data/productData';
 
 const ProductsPage = () => {
+  // Scroll to top when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Import products from data file
   const products = productData.map(product => ({
     id: product.id,
