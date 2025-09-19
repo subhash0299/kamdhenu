@@ -112,7 +112,7 @@ const HomePage = () => {
     }, 8000);
 
     return () => {
-      clearInterval(timer);
+      clearInterval(productTimer);
     };
   }, []);
 
