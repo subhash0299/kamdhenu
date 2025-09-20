@@ -53,10 +53,10 @@ const MobileBottomNav = () => {
 
 const MobileHomePage = () => {
   return (
-    <div className="bg-white min-h-screen pb-16">
+    <div className="bg-white min-h-screen pb-16 relative">
       {/* Header */}
       <header className="px-4 py-3 border-b border-slate-200 flex flex-col items-center">
-        <div className="text-lg font-bold text-slate-800 mb-1">KAMDHENU STEEL</div>
+        <div className="text-lg font-bold text-slate-800 mb-1">KAMDHENU STEEL FURNITURE</div>
         <div className="text-sm text-slate-600 flex items-center gap-2">
           <span>Bangalore, Karnataka</span>
         </div>
@@ -76,28 +76,13 @@ const MobileHomePage = () => {
       <div className="px-4">
         <div className="rounded-xl overflow-hidden shadow-lg mb-2 relative">
           <img
-            src="/Steel/Steel-1.jpeg"
+            src="/v1.mp4"
             alt="Stainless Steel Chequered Plate"
             className="w-full h-56 object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center py-2 text-base font-medium">
             Stainless Steel Chequered Plate
           </div>
-          {/* WhatsApp & Call Floating Buttons */}
-          <a
-            href="https://wa.me/919916082929"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute bottom-3 right-3 bg-green-500 rounded-full p-2 shadow-lg"
-          >
-            <img src="/whatsapp.png" alt="WhatsApp" className="w-7 h-7" />
-          </a>
-          <a
-            href="tel:9916082929"
-            className="absolute bottom-14 right-3 bg-blue-500 rounded-full p-2 shadow-lg"
-          >
-            <Phone className="w-7 h-7 text-white" />
-          </a>
         </div>
       </div>
 
@@ -113,6 +98,173 @@ const MobileHomePage = () => {
         <div className="mb-3 text-base text-slate-700">Stainless Steel Pipes</div>
         <div className="mb-3 text-base text-slate-700">Stainless Steel Sheets</div>
         {/* Add more products as needed */}
+      </div>
+
+      {/* Product Cards Section */}
+      <div className="px-4 mt-4">
+        {/* Product 1 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Valve</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/pickot1/p1 (11).jpeg" alt="Stainless Steel Valve" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 10-80mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Coated, Polished</div>
+              <div><span className="font-bold">Specialty :</span> Corrosion Proof, High Strength</div>
+              <div><span className="font-bold">Length :</span> 1-3000mm</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+        {/* Product 2 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Strips</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/Steel/strip.jpeg" alt="Stainless Steel Strips" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 0.5-3mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Polished</div>
+              <div><span className="font-bold">Specialty :</span> High Strength</div>
+              <div><span className="font-bold">Length :</span> Custom</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+        {/* Product 3 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Coils</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/Steel/coil.jpeg" alt="Stainless Steel Coils" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 0.5-5mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Polished</div>
+              <div><span className="font-bold">Specialty :</span> Flexible, Durable</div>
+              <div><span className="font-bold">Length :</span> Custom</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+        {/* Product 4 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Pipes</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/Steel/pipe.jpeg" alt="Stainless Steel Pipes" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 1-10mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Polished</div>
+              <div><span className="font-bold">Specialty :</span> High Strength</div>
+              <div><span className="font-bold">Length :</span> Custom</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+        {/* Product 5 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Sheets</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/Steel/sheet.jpeg" alt="Stainless Steel Sheets" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 0.5-5mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Polished</div>
+              <div><span className="font-bold">Specialty :</span> Durable</div>
+              <div><span className="font-bold">Length :</span> Custom</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+        {/* Product 6 */}
+        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Chequered Plate</div>
+          <div className="flex gap-3 mb-2">
+            <img src="/BigAcrylic/BigAcrylic-1.jpeg" alt="Stainless Steel Chequered Plate" className="w-20 h-20 object-contain rounded" />
+            <div className="text-xs text-slate-700">
+              <div><span className="font-bold">Thickness :</span> 1-8mm</div>
+              <div><span className="font-bold">Country of Origin :</span> India</div>
+              <div><span className="font-bold">Surface Finishing :</span> Patterned</div>
+              <div><span className="font-bold">Specialty :</span> Anti-slip, Durable</div>
+              <div><span className="font-bold">Length :</span> Custom</div>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-2">
+            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
+            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Social Media Buttons */}
+      <div className="fixed right-3 bottom-24 z-50 flex flex-col gap-4 items-center">
+        
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/919916082929"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full shadow-lg overflow-hidden"
+        >
+          <img src="/social/whatsapp.png" alt="WhatsApp" className="w-full h-full object-cover" />
+        </a>
+
+        {/* Phone */}
+        <a
+          href="tel:9916082929"
+          className="bg-blue-500 rounded-full p-2 shadow-lg"
+        >
+          <Phone className="w-7 h-7 text-white" />
+        </a>
+
+        {/* Instagram */}
+        <a
+        href="https://instagram.com/YOUR_INSTAGRAM"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-12 h-12 rounded-full shadow-lg overflow-hidden"
+        >
+        <img 
+            src="/social/instagram.png" 
+            alt="Instagram" 
+            className="w-full h-full object-cover"
+        />
+        </a>
+
+        {/* Facebook */}
+        <a
+          href="https://facebook.com/YOUR_FACEBOOK"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full shadow-lg overflow-hidden"
+        >
+          <img src="/social/facebook.png" alt="Facebook" className="w-full h-full object-cover" />
+        </a>
+        {/* YouTube */}
+        <a
+          href="https://youtube.com/YOUR_YOUTUBE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full shadow-lg overflow-hidden"
+        >
+          <img src="/social/youtube.png" alt="YouTube" className="w-full h-full object-cover" />
+        </a>
       </div>
 
       {/* Bottom Navigation */}
