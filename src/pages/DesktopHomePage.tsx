@@ -1,0 +1,349 @@
+import React, { useState, useEffect } from 'react';
+import { Star, Award, Users, Clock, ArrowRight, Play, CheckCircle, Sparkles } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+
+const HomePage = () => {
+  const navigate = useNavigate();
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  // Single hero image
+  const heroImage = 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1600';
+
+  // All available product images
+  const allProductImages = [
+    // Steel Pillers
+    '/Steel/Steel-1.jpeg', '/Steel/Steel-2.jpeg', '/Steel/Steel-3.jpeg', '/Steel/Steel-4.jpeg', '/Steel/Steel-5.jpeg',
+    
+    // Wooden Pillers
+    '/wooden/wood-1.jpeg', '/wooden/wood-2.jpeg', '/wooden/wood-3.jpeg', '/wooden/wood-4.jpeg', '/wooden/wood-5.jpeg',
+    '/wooden/wood-6.jpeg', '/wooden/wood-7.jpeg', '/wooden/wood-8.jpeg', '/wooden/wood-9.jpeg', '/wooden/wood-10.jpeg',
+    '/wooden/wood-11.jpeg', '/wooden/wood-12.jpeg', '/wooden/wood-13.jpeg', '/wooden/wood-14.jpeg', '/wooden/wood-15.jpeg',
+    '/wooden/wood-16.jpeg', '/wooden/wood-17.jpeg', '/wooden/wood-18.jpeg', '/wooden/wood-19.jpeg', '/wooden/wood-20.jpeg',
+    
+    // Black Wood Pillers
+    '/BlackWood/BlackWood-1.jpeg', '/BlackWood/BlackWood-2.jpeg', '/BlackWood/BlackWood-3.jpeg', '/BlackWood/BlackWood-4.jpeg',
+    '/BlackWood/BlackWood-5.jpeg', '/BlackWood/BlackWood-6.jpeg', '/BlackWood/BlackWood-7.jpeg', '/BlackWood/BlackWood-8.jpeg',
+    '/BlackWood/BlackWood-9.jpeg', '/BlackWood/BlackWood-10.jpeg',
+    
+    // Small Wood Pillers
+    '/SmallWood/SmallWood-1.jpeg', '/SmallWood/SmallWood-2.jpeg', '/SmallWood/SmallWood-3.jpeg', '/SmallWood/SmallWood-4.jpeg',
+    '/SmallWood/SmallWood-5.jpeg', '/SmallWood/SmallWood-6.jpeg', '/SmallWood/SmallWood-7.jpeg', '/SmallWood/SmallWood-8.jpeg',
+    '/SmallWood/SmallWood-9.jpeg',
+    
+    // Big Acrylic Pillers
+    '/BigAcrylic/BigAcrylic-1.jpeg', '/BigAcrylic/BigAcrylic-2.jpeg', '/BigAcrylic/BigAcrylic-3.jpeg', '/BigAcrylic/BigAcrylic-4.jpeg',
+    '/BigAcrylic/BigAcrylic-5.jpeg', '/BigAcrylic/BigAcrylic-6.jpeg', '/BigAcrylic/BigAcrylic-7.jpeg', '/BigAcrylic/BigAcrylic-8.jpeg',
+    '/BigAcrylic/BigAcrylic-9.jpeg', '/BigAcrylic/BigAcrylic-10.jpeg',
+    
+    // Small Acrylic Pillers
+    '/SmallAcrylic/Untitled-1.jpeg', '/SmallAcrylic/Untitled-2.jpeg', '/SmallAcrylic/Untitled-3.jpeg', '/SmallAcrylic/Untitled-4.jpeg',
+    '/SmallAcrylic/Untitled-5.jpeg', '/SmallAcrylic/Untitled-6.jpeg', '/SmallAcrylic/Untitled-7.jpeg', '/SmallAcrylic/Untitled-8.jpeg',
+    '/SmallAcrylic/Untitled-9.jpeg', '/SmallAcrylic/Untitled-10.jpeg', '/SmallAcrylic/Untitled-11.jpeg', '/SmallAcrylic/Untitled-12.jpeg',
+    '/SmallAcrylic/Untitled-13.jpeg', '/SmallAcrylic/Untitled-14.jpeg', '/SmallAcrylic/Untitled-15.jpeg',
+    
+    // Middle Acrylic Pillers
+    '/MiddleAcrylic/black.jpeg', '/MiddleAcrylic/blue.jpeg', '/MiddleAcrylic/dark-purple.jpeg', '/MiddleAcrylic/dark-wood.jpeg',
+    '/MiddleAcrylic/light-orange.jpeg', '/MiddleAcrylic/orange.jpeg', '/MiddleAcrylic/white.jpeg', '/MiddleAcrylic/yellow.jpeg'
+  ];
+
+  const productNames = [
+    'Classic Steel Piller', 'Royal Steel Piller', 'Modern Steel Piller', 'Industrial Steel Piller', 'Decorative Steel Piller',
+    'Classic Wooden Piller', 'Carved Wooden Piller', 'Modern Wooden Piller', 'Rustic Wooden Piller', 'Polished Wooden Piller',
+    'Premium Black Wood Piller', 'Elegant Black Wood Piller', 'Luxury Black Wood Piller', 'Designer Black Wood Piller',
+    'Clear Acrylic Piller', 'Frosted Acrylic Piller', 'Colored Acrylic Piller', 'Textured Acrylic Piller', 'LED Acrylic Piller',
+    'Gradient Acrylic Piller', 'Mirror Acrylic Piller', 'Etched Acrylic Piller', 'Premium Acrylic Piller'
+  ];
+
+  const categories = ['Steel Pillers', 'Wooden Pillers', 'Acrylic Pillers'];
+  const badges = ['Bestseller', 'New', 'Premium', 'Popular', 'Featured'];
+  const prices = ['₹2,500', '₹3,200', '₹3,800', '₹4,500', '₹5,200', '₹6,000', '₹6,800', '₹7,500'];
+
+  // Function to generate random featured products
+  const generateRandomProducts = () => {
+    const shuffledImages = [...allProductImages].sort(() => Math.random() - 0.5);
+    const selectedImages = shuffledImages.slice(0, 5);
+    
+    return selectedImages.map((image, index) => ({
+      id: Math.floor(Math.random() * 1000) + index,
+      name: productNames[Math.floor(Math.random() * productNames.length)],
+      category: categories[Math.floor(Math.random() * categories.length)],
+      image: image,
+      description: 'Premium quality piller with elegant finish for modern interiors and commercial spaces',
+      badge: badges[Math.floor(Math.random() * badges.length)],
+      price: prices[Math.floor(Math.random() * prices.length)],
+      rating: (4.5 + Math.random() * 0.5).toFixed(1)
+    }));
+  };
+
+  const handleExploreProducts = () => {
+    // Navigate to products page instead of scrolling
+    navigate('/products');
+  };
+
+  const luxuryFeatures = [
+    {
+      icon: Award,
+      title: 'Master Craftsmanship',
+      description: 'Each piece is meticulously handcrafted by our master artisans with over 15 years of expertise',
+      metric: '15+ Years'
+    },
+    {
+      icon: Users,
+      title: 'Elite Clientele',
+      description: 'Trusted by luxury hotels, premium offices, and discerning homeowners across India',
+      metric: '500+ Clients'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Bespoke Solutions',
+      description: 'Every creation is uniquely designed and tailored to your specific vision and requirements',
+      metric: '1000+ Projects'
+    },
+    {
+      icon: Sparkles,
+      title: 'Lifetime Excellence',
+      description: 'Premium materials and superior craftsmanship backed by our comprehensive warranty',
+      metric: '5 Year Warranty'
+    },
+  ];
+
+  useEffect(() => {
+    // Initialize with random products
+    setFeaturedProducts(generateRandomProducts());
+    
+    // Change products every 8 seconds
+    const productTimer = setInterval(() => {
+      setFeaturedProducts(generateRandomProducts());
+    }, 8000);
+
+    return () => {
+      clearInterval(productTimer);
+    };
+  }, []);
+
+  return (
+    <div className="overflow-hidden">
+      {/* Hero Section - Mobile Optimized */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Static Background */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Kamdhenu Steel Furniture"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        </div>
+
+        {/* Hero Content - Mobile Optimized */}
+        <div className="relative z-10 w-full px-4 py-8">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Logo/Brand */}
+            <div className="mb-8">
+              <img
+                src="/whitelogo.png"
+                alt="Kamdhenu Steel"
+                className="h-12 sm:h-16 mx-auto mb-4"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
+              />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
+                Kamdhenu Steel Furniture
+              </h1>
+              <p className="text-sm sm:text-base text-orange-200">
+                Premium Steel Pillers & Pickots
+              </p>
+            </div>
+            
+            {/* Product Categories */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center max-w-md mx-auto">
+              {/* Pillers Icon */}
+              <div 
+                onClick={() => {
+                  navigate('/products');
+                  setTimeout(() => {
+                    const event = new CustomEvent('setProductSection', { detail: 'pillers' });
+                    window.dispatchEvent(event);
+                  }, 100);
+                }}
+                className="group cursor-pointer flex flex-col items-center space-y-3 p-4 sm:p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-orange-500/50 transition-all duration-300 p-2">
+                  <img 
+                    src="/Steel/Steel-1.jpeg" 
+                    alt="Pillers" 
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Pillers</h3>
+                  <p className="text-white/80 text-xs sm:text-sm">Steel, Wood & Acrylic</p>
+                </div>
+              </div>
+
+              {/* Pickots Icon */}
+              <div 
+                onClick={() => {
+                  navigate('/products');
+                  setTimeout(() => {
+                    const event = new CustomEvent('setProductSection', { detail: 'pickots' });
+                    window.dispatchEvent(event);
+                  }, 100);
+                }}
+                className="group cursor-pointer flex flex-col items-center space-y-3 p-4 sm:p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300 p-2">
+                  <img 
+                    src="/pickot1/Untitled-1.jpeg" 
+                    alt="Pickots" 
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Pickots</h3>
+                  <p className="text-white/80 text-xs sm:text-sm">Decorative Designs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Premium Features Section */}
+      
+
+      {/* Featured Products Section */}
+      <section className="py-32 bg-slate-900 relative overflow-hidden">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.3),transparent_70%)]" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Our Products
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Discover our most coveted designs, each piece a testament to exceptional craftsmanship
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            {featuredProducts.map((product, index) => (
+              <div key={product.id} className="group relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 overflow-hidden group-hover:-translate-y-3">
+                  {/* Product Badge */}
+                  <div className="absolute top-6 left-6 z-20">
+                    <span className={`px-4 py-2 rounded-full text-xs font-semibold shadow-lg ${
+                      product.badge === 'Bestseller' ? 'bg-gradient-to-r from-green-500 to-green-600 text-white' :
+                      product.badge === 'New' ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white' :
+                      'bg-gradient-to-r from-purple-500 to-purple-600 text-white'
+                    }`}>
+                      {product.badge}
+                    </span>
+                  </div>
+                  {/* Product Image */}
+                  <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 p-8 h-80">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Rating Badge */}
+                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1 shadow-lg">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm font-semibold text-slate-800">{product.rating}</span>
+                    </div>
+                  </div>
+                  {/* Removed name, description, and price */}
+                  <div className="p-8">
+                    <div className="mb-4">
+                      <span className="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                        {product.category}
+                      </span>
+                    </div>
+                    <Link
+                      to={`/products/${product.id}`}
+                      className="group/btn relative w-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2 overflow-hidden"
+                    >
+                      <span className="relative z-10">Explore Details</span>
+                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Link
+              to="/products"
+              className="group inline-flex items-center space-x-2 bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1"
+            >
+              <span>View Complete Collection</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-20">
+            <span className="inline-block px-6 py-3 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              Why Choose Excellence
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
+              Crafted for the
+              <span className="block bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent">
+                Extraordinary
+              </span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Every piece tells a story of uncompromising quality, innovative design, and masterful execution
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {luxuryFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="group relative">
+                  <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 group-hover:-translate-y-2 overflow-hidden">
+                    {/* Gradient Background on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      
+                      <div className="text-center mb-4">
+                        <div className="text-3xl font-bold text-orange-600 mb-1">{feature.metric}</div>
+                        <h3 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h3>
+                      </div>
+                      
+                      <p className="text-slate-600 leading-relaxed text-center">{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
+      
+    </div>
+  );
+};
+
+export default HomePage;
