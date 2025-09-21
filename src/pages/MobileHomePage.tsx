@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Home, User, Box, Mail, Phone } from 'lucide-react';
 
 const MobileBottomNav = () => {
@@ -52,6 +52,16 @@ const MobileBottomNav = () => {
 };
 
 const MobileHomePage = () => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = (section: 'pillers' | 'pickots') => {
+    navigate('/products');
+    setTimeout(() => {
+      const event = new CustomEvent('setProductSection', { detail: section });
+      window.dispatchEvent(event);
+    }, 100);
+  };
+
   return (
     <div className="bg-white min-h-screen pb-16 relative">
       {/* Header */}
@@ -117,7 +127,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pillers')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
         {/* Product 2 */}
@@ -135,7 +150,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pillers')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
         {/* Product 3 */}
@@ -153,7 +173,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pillers')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
         {/* Product 4 */}
@@ -171,7 +196,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pillers')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
         {/* Product 5 */}
@@ -189,7 +219,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pillers')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
         {/* Product 6 */}
@@ -207,7 +242,12 @@ const MobileHomePage = () => {
           </div>
           <div className="flex gap-2 mt-2">
             <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700">View Details</button>
+            <button 
+              onClick={() => handleViewDetails('pickots')}
+              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
+            >
+              View Details
+            </button>
           </div>
         </div>
       </div>
