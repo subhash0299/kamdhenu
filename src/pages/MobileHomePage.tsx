@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Home, User, Box, Mail, Phone } from 'lucide-react';
+const images = [
+  "/home/home1.jpg",
+  "/home/home2.jpg",
+  "/home/home3.jpg",
+  "/home/home4.jpg",
+  "/home/home5.jpg"
+];
 
 const MobileBottomNav = () => {
   const [visible, setVisible] = useState(true);
@@ -62,6 +69,16 @@ const MobileHomePage = () => {
     }, 100);
   };
 
+  // Slideshow logic
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000); // Change image every 2.5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="bg-white min-h-screen pb-16 relative">
       {/* Header */}
@@ -82,16 +99,22 @@ const MobileHomePage = () => {
         />
       </div>
 
-      {/* Main Image Section */}
+      {/* Main Image Section (Slideshow) */}
       <div className="px-4">
         <div className="rounded-xl overflow-hidden shadow-lg mb-2 relative">
           <img
-            src="/v1.mp4"
-            alt="Stainless Steel Chequered Plate"
-            className="w-full h-56 object-cover"
+            src={images[currentImage]}
+            alt={`Home Slide ${currentImage + 1}`}
+            className="w-full h-56 object-cover transition-all duration-700"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center py-2 text-base font-medium">
-            Stainless Steel Chequered Plate
+          {/* Dots indicator */}
+          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+            {images.map((_, idx) => (
+              <span
+                key={idx}
+                className={`inline-block w-2 h-2 rounded-full ${idx === currentImage ? 'bg-orange-600' : 'bg-slate-300'} transition-all`}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -101,22 +124,24 @@ const MobileHomePage = () => {
         Product Range
       </div>
 
-      {/* Example Product List */}
+    {/* 
+       Example Product List 
       <div className="px-4">
         <div className="mb-3 text-base text-slate-700">Stainless Steel Angles</div>
         <div className="mb-3 text-base text-slate-700">Stainless Steel Coils</div>
         <div className="mb-3 text-base text-slate-700">Stainless Steel Pipes</div>
         <div className="mb-3 text-base text-slate-700">Stainless Steel Sheets</div>
-        {/* Add more products as needed */}
+
       </div>
+    */}
 
       {/* Product Cards Section */}
       <div className="px-4 mt-4">
         {/* Product 1 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Valve</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Acrylic Master Piller</div>
           <div className="flex gap-3 mb-2">
-            <img src="/pickot1/p1 (11).jpeg" alt="Stainless Steel Valve" className="w-20 h-20 object-contain rounded" />
+            <img src="/BigAcrylic/BigAcrylic-8.jpeg" alt="Stainless Steel Valve" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
               <div><span className="font-bold">Thickness :</span> 10-80mm</div>
               <div><span className="font-bold">Country of Origin :</span> India</div>
@@ -125,21 +150,19 @@ const MobileHomePage = () => {
               <div><span className="font-bold">Length :</span> 1-3000mm</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pillers')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
+            <div className="flex justify-center mt-2">
+              <Link to="/products"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+              
+                View More
+              </Link>
+            </div>
         </div>
         {/* Product 2 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Strips</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Acrylic Pillers</div>
           <div className="flex gap-3 mb-2">
-            <img src="/Steel/strip.jpeg" alt="Stainless Steel Strips" className="w-20 h-20 object-contain rounded" />
+            <img src="/SmallAcrylic/blue.jpeg" alt="Stainless Steel Strips" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
               <div><span className="font-bold">Thickness :</span> 0.5-3mm</div>
               <div><span className="font-bold">Country of Origin :</span> India</div>
@@ -148,21 +171,19 @@ const MobileHomePage = () => {
               <div><span className="font-bold">Length :</span> Custom</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pillers')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
+            <div className="flex justify-center mt-2">
+              <Link to="/products"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+              
+                View More
+              </Link>
+            </div>
         </div>
         {/* Product 3 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Coils</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Acrylic Pillers</div>
           <div className="flex gap-3 mb-2">
-            <img src="/Steel/coil.jpeg" alt="Stainless Steel Coils" className="w-20 h-20 object-contain rounded" />
+            <img src="/MiddleAcrylic/blue.jpeg" alt="Stainless Steel Coils" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
               <div><span className="font-bold">Thickness :</span> 0.5-5mm</div>
               <div><span className="font-bold">Country of Origin :</span> India</div>
@@ -171,21 +192,19 @@ const MobileHomePage = () => {
               <div><span className="font-bold">Length :</span> Custom</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pillers')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
+            <div className="flex justify-center mt-2 w-full">
+              <Link to="/products"
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+              
+                View More
+              </Link>
+            </div>
         </div>
         {/* Product 4 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Pipes</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Wooden Master Pillers</div>
           <div className="flex gap-3 mb-2">
-            <img src="/Steel/pipe.jpeg" alt="Stainless Steel Pipes" className="w-20 h-20 object-contain rounded" />
+            <img src="/wooden/wood-3.jpeg" alt="Stainless Steel Pipes" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
               <div><span className="font-bold">Thickness :</span> 1-10mm</div>
               <div><span className="font-bold">Country of Origin :</span> India</div>
@@ -194,44 +213,52 @@ const MobileHomePage = () => {
               <div><span className="font-bold">Length :</span> Custom</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pillers')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
+            <div className="flex justify-center mt-2">
+              <Link to="/products"
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+              
+                View More
+              </Link>
+            </div>
         </div>
         {/* Product 5 */}
-        <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Sheets</div>
-          <div className="flex gap-3 mb-2">
-            <img src="/Steel/sheet.jpeg" alt="Stainless Steel Sheets" className="w-20 h-20 object-contain rounded" />
+          <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
+          <div className="text-lg font-semibold text-slate-800 mb-2">Wooden Master Pillers</div>
+            
+            <div className="flex gap-4 mb-3">
+              {/* Bigger Image */}
+              <img
+                src="/Steel/Steel-1.jpeg"
+                alt="Stainless Steel Sheets"
+                className="w-28 h-28 object-contain rounded"
+              />
+
+              {/* Bigger Text */}
             <div className="text-xs text-slate-700">
-              <div><span className="font-bold">Thickness :</span> 0.5-5mm</div>
-              <div><span className="font-bold">Country of Origin :</span> India</div>
-              <div><span className="font-bold">Surface Finishing :</span> Polished</div>
-              <div><span className="font-bold">Specialty :</span> Durable</div>
-              <div><span className="font-bold">Length :</span> Custom</div>
+                <div><span className="font-bold">Thickness :</span> 0.5-5mm</div>
+                <div><span className="font-bold">Country of Origin :</span> India</div>
+                <div><span className="font-bold">Surface Finishing :</span> Polished</div>
+                <div><span className="font-bold">Specialty :</span> Durable</div>
+                <div><span className="font-bold">Length :</span> Custom</div>
+              </div>
+            </div>
+
+            {/* Button Full Width */}
+            <div className="flex justify-center mt-2">
+              <Link
+                to="/products"
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-semibold shadow transition-all duration-300"
+              >
+                View More
+              </Link>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pillers')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
-        </div>
+
         {/* Product 6 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
           <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Chequered Plate</div>
           <div className="flex gap-3 mb-2">
-            <img src="/BigAcrylic/BigAcrylic-1.jpeg" alt="Stainless Steel Chequered Plate" className="w-20 h-20 object-contain rounded" />
+            <img src="/BigAcrylic/BigAcrylic-1.jpeg" alt="Stainless Steel Chequered Plate" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
               <div><span className="font-bold">Thickness :</span> 1-8mm</div>
               <div><span className="font-bold">Country of Origin :</span> India</div>
@@ -240,15 +267,13 @@ const MobileHomePage = () => {
               <div><span className="font-bold">Length :</span> Custom</div>
             </div>
           </div>
-          <div className="flex gap-2 mt-2">
-            <button className="flex-1 bg-blue-700 text-white py-2 rounded font-semibold">Get Best Price</button>
-            <button 
-              onClick={() => handleViewDetails('pickots')}
-              className="flex-1 bg-slate-100 text-blue-700 py-2 rounded font-semibold border border-blue-700"
-            >
-              View Details
-            </button>
-          </div>
+            <div className="flex justify-center mt-2">
+              <Link to="/products"
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+              
+                View More
+              </Link>
+            </div>
         </div>
       </div>
 
@@ -275,7 +300,7 @@ const MobileHomePage = () => {
 
         {/* Instagram */}
         <a
-        href="https://instagram.com/YOUR_INSTAGRAM"
+        href="https://instagram.com/kamdhenusteelfurniture"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full shadow-lg overflow-hidden"
