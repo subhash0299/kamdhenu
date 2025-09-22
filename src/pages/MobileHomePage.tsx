@@ -152,7 +152,7 @@ const MobileHomePage = () => {
           </div>
             <div className="flex justify-center mt-2">
               <Link to="/products"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
               
                 View More
               </Link>
@@ -173,7 +173,7 @@ const MobileHomePage = () => {
           </div>
             <div className="flex justify-center mt-2">
               <Link to="/products"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
+                className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-full font-semibold shadow transition-all duration-300">
               
                 View More
               </Link>
@@ -223,7 +223,7 @@ const MobileHomePage = () => {
         </div>
         {/* Product 5 */}
           <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Wooden Master Pillers</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Steel Master Pillers</div>
             
             <div className="flex gap-4 mb-3">
               {/* Bigger Image */}
@@ -256,7 +256,7 @@ const MobileHomePage = () => {
 
         {/* Product 6 */}
         <div className="bg-white rounded-xl shadow border mb-4 p-4 flex flex-col relative">
-          <div className="text-lg font-semibold text-slate-800 mb-2">Stainless Steel Chequered Plate</div>
+          <div className="text-lg font-semibold text-slate-800 mb-2">Acrylic Pillers</div>
           <div className="flex gap-3 mb-2">
             <img src="/BigAcrylic/BigAcrylic-1.jpeg" alt="Stainless Steel Chequered Plate" className="w-28 h-28 object-contain rounded" />
             <div className="text-xs text-slate-700">
