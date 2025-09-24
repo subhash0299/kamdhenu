@@ -4,8 +4,12 @@ import { Home, User, Box, Mail, Phone } from 'lucide-react';
 const images = [
   "/home/home1.jpg",
   "/home/home2.jpg",
-  "/home/home3.jpg",
+  "/home/home8.jpg",
   "/home/home4.jpg",
+  "/home/home9.jpg",
+  "/home/home6.jpg",
+  "/home/home7.jpg",
+  "/home/home3.jpg",
   "/home/home5.jpg"
 ];
 
@@ -90,7 +94,7 @@ const MobileHomePage = () => {
         <div className="text-xs text-slate-400 mt-1">GST : 29AMOPB9297N1ZZ</div>
       </header>
 
-      {/* Search Bar */}
+      {/* Search Bar 
       <div className="px-4 py-3">
         <input
           type="text"
@@ -98,6 +102,7 @@ const MobileHomePage = () => {
           className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
       </div>
+      */}
 
       {/* Main Image Section (Slideshow) */}
       <div className="px-4">

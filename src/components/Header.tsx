@@ -55,7 +55,7 @@ const Header = () => {
             <span className={`text-sm font-bold transition-colors sm:hidden ${
               isScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
             }`}>
-              Kamdhenu Steel
+              Kamdhenu Steel Furniture
             </span>
           </Link>
 
